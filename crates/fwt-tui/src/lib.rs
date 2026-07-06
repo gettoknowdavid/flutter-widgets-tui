@@ -11,6 +11,9 @@
 //! `fwt-app` services, which this crate then calls through trait-bound
 //! interfaces only.
 
+pub mod terminal;
+pub use terminal::{TerminalError, TerminalGuard};
+
 #[derive(Debug, thiserror::Error)]
 pub enum TuiError {
     #[error("stub error — no real implementation yet (Ticket 002+)")]
