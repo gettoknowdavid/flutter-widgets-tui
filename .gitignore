@@ -1,0 +1,105 @@
+# =============================================================
+# flutter-widgets-tui — root .gitignore
+# One file for the whole Cargo workspace (all crates share a
+# single /target directory, so per-crate .gitignore files are
+# unnecessary — see ADR-000).
+# =============================================================
+
+# ---------------------------------------------------------
+# Rust / Cargo build artifacts
+# ---------------------------------------------------------
+/target/
+**/target/
+# Do NOT ignore Cargo.lock — this is a binary application
+# (fwt-cli produces an executable), not a published library,
+# so the lockfile should be committed for reproducible builds
+# across contributors and CI (per Rust convention for bins).
+
+# Backup files rustfmt/rust-analyzer sometimes leave behind
+*.rs.bk
+*.pdb
+
+# ---------------------------------------------------------
+# RustRover / JetBrains IDE metadata
+# ---------------------------------------------------------
+.idea/
+*.iml
+out/
+
+# ---------------------------------------------------------
+# rust-analyzer / other tooling caches
+# ---------------------------------------------------------
+.rust-analyzer/
+
+# ---------------------------------------------------------
+# OS-generated files
+# ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ---------------------------------------------------------
+# Local application data (TRD Section 4 / 9.4)
+# catalog.db and user.db are created/loaded at runtime from
+# the OS-appropriate data directory (via `directories`/`etcetera`)
+# — NOT committed to the repo. The *seed* SQL/JSON that builds
+# catalog.db at release time lives in assets/catalog_seed/ and
+# IS tracked; only the compiled .db artifacts are ignored.
+# ---------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+*.db-journal
+
+# ---------------------------------------------------------
+# Config & secrets (TRD Section 9.1/9.5)
+# config.toml is user-generated at runtime in the OS config
+# dir and must never be committed (may contain AI provider
+# endpoint overrides, etc.). API keys/tokens must never be
+# committed under any filename.
+# ---------------------------------------------------------
+config.toml
+.env
+.env.*
+*.pem
+*.key
+secrets.toml
+auth_tokens.*
+
+# ---------------------------------------------------------
+# Logging (TRD Section 3 / Ticket 002-003)
+# tracing-appender rotating file logs — written to the OS
+# data/cache dir at runtime, never to the repo.
+# ---------------------------------------------------------
+*.log
+logs/
+
+# ---------------------------------------------------------
+# insta snapshot testing (Ticket 005, TRD Section 10)
+# Committed baseline snapshots (*.snap) ARE tracked — they are
+# intentional, version-controlled regression documentation.
+# Only the *.snap.new pending-review files (created by
+# `cargo insta test` before `cargo insta review`/accept) and
+# insta's internal pending dir are ignored.
+# ---------------------------------------------------------
+*.snap.new
+.insta/
+
+# ---------------------------------------------------------
+# criterion benchmark output (TRD Section 10, performance tests)
+# ---------------------------------------------------------
+/target/criterion/
+criterion/
+
+# ---------------------------------------------------------
+# xtask / misc tooling scratch space
+# ---------------------------------------------------------
+/tmp/
+*.tmp
+
+# ---------------------------------------------------------
+# Local override / scratch config some contributors may use
+# ---------------------------------------------------------
+.cargo/config.local.toml

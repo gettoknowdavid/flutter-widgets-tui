@@ -1,0 +1,17 @@
+[package]
+name = "fwt-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish = false
+
+[[bin]]
+name = "fwt"
+path = "src/main.rs"
+
+[dependencies]
+fwt-app = { path = "../fwt-app" }
+fwt-domain = { path = "../fwt-domain" }
+fwt-infra = { path = "../fwt-infra" }
+fwt-tui = { path = "../fwt-tui" }

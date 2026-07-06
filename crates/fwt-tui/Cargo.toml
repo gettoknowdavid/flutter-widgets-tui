@@ -1,0 +1,14 @@
+[package]
+name = "fwt-tui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+crossterm = { workspace = true }
+fwt-app = { path = "../fwt-app" }
+fwt-domain = { path = "../fwt-domain" }
+ratatui = { workspace = true }
+thiserror = { workspace = true }
