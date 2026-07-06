@@ -6,6 +6,8 @@
 //! `fwt-tui::run()`. For now it does the bare minimum to prove the whole
 //! workspace links correctly end-to-end.
 
+pub mod logging;
+
 fn main() {
     if let Err(err) = fwt_tui::run() {
         eprintln!("fatal error: {err}");
