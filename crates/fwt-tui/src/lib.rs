@@ -11,6 +11,7 @@
 //! `fwt-app` services, which this crate then calls through trait-bound
 //! interfaces only.
 
+pub mod panic_hook;
 pub mod terminal;
 pub use terminal::{TerminalError, TerminalGuard};
 
