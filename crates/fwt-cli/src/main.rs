@@ -9,6 +9,7 @@
 use clap::Parser;
 
 pub mod logging;
+pub mod reset;
 
 #[derive(Parser, Debug)]
 #[command(name = "fwt", version, about)]
@@ -56,6 +57,22 @@ fn main() -> color_eyre::Result<()> {
     fwt_tui::panic_hook::install_panic_hook();
 
     let cli = Cli::parse();
+
+    if cli.reset {
+        let stdin = std::io::stdin();
+        let stdout = std::io::stdout();
+        return match reset::confirm_reset(stdin.lock(), stdout.lock()) {
+            Ok(reset::ResetOutcome::Confirmed) => {
+                reset::perform_reset_stub();
+                Ok(())
+            }
+            Err(reset::ResetError::NotConfirmed) => {
+                println!("Reset cancelled; no data was touched.");
+                Ok(())
+            }
+            Err(e) => Err(e.into()),
+        };
+    }
 
     #[cfg(debug_assertions)]
     if cli.panic_test {
