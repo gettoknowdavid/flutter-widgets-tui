@@ -15,3 +15,11 @@ pub struct UpdateOutcome {
     /// why this matters for performance.
     pub redraw: bool,
 }
+impl UpdateOutcome {
+    pub fn redraw_only(redraw: bool) -> Self {
+        Self {
+            commands: Vec::new(),
+            redraw,
+        }
+    }
+}

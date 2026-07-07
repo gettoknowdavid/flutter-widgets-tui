@@ -1,61 +1,42 @@
+//! Command dispatch — the single choke point through which every
+//! `Command` returned by `update()` is executed asynchronously.
+//!
+//! Per TRD Section 2.2/2.3: `update()` never performs I/O directly. It
+//! only *describes* side effects as `Command` values; this module spawns
+//! the actual async work and feeds the eventual `Message` back into the
+//! loop via the shared `mpsc::Sender<Message>`. No ad hoc `tokio::spawn`
+//! calls belong anywhere else in the codebase — this is the one place.
+
 use crate::command::Command;
 use crate::message::Message;
+use tokio::sync::mpsc;
 
-/// The single, centralized dispatcher for all `Command`s. Every background
-/// task in the whole app is spawned through here — never call
-/// `tokio::spawn` directly from `fwt-tui` or anywhere else.
-///
-/// Why centralize this? Because it gives us ONE place to add
-/// cross-cutting behavior later (a concurrency limit via `Semaphore` once
-/// Epic 5's AI streaming lands; a tracing span per task; cancellation on
-/// quit) without hunting down scattered `tokio::spawn` call sites.
-#[derive(Clone)]
-pub struct CommandExecutor {
-    /// A clone of the SAME sender the event loop is receiving from. Every
-    /// spawned task gets its own clone of this, so many tasks can be "in
-    /// flight" concurrently, each independently able to send a Message
-    /// back when it finishes.
-    message_tx: tokio::sync::mpsc::Sender<Message>,
-}
-impl CommandExecutor {
-    #[must_use]
-    pub fn new(message_tx: tokio::sync::mpsc::Sender<Message>) -> Self {
-        Self { message_tx }
+/// Spawns a `Command` as a non-blocking `tokio::task`, whose result is
+/// sent back through `sender` as a `Message`. The caller (the event
+/// loop) must never `.await` this directly — call it and move on; the
+/// render/UI thread must never block on a `Command`'s execution.
+pub fn dispatch(command: Command, sender: mpsc::Sender<Message>) {
+    match command {
+        Command::None => {}
+        Command::SimulatedDelay(duration) => {
+            tokio::spawn(async move {
+                tokio::time::sleep(duration).await;
+                // Best-effort send: if the receiver is already gone (the
+                // app is shutting down), there's nowhere useful to report
+                // the failure, so it's dropped silently rather than
+                // panicking a background task.
+                let _ = sender.send(Message::DebugTaskCompleted).await;
+            });
+        }
     }
+}
 
-    /// Accepts a `Command`, spawns it as a `tokio::task`, and returns
-    /// IMMEDIATELY — it does not wait for the command to finish. This is
-    /// the non-blocking guarantee in code form: `dispatch()` itself never
-    /// `.await`s the command's actual work, only the (instant) act of
-    /// scheduling it.
-    pub fn dispatch(&self, command: Command) {
-        // Clone the sender for this specific task. `mpsc::Sender` is
-        // designed to be cheaply cloneable for exactly this pattern: many
-        // producers, one consumer (the event loop holds the single
-        // `Receiver`).
-        let tx = self.message_tx.clone();
-
-        tokio::spawn(async move {
-            match command {
-                Command::Noop => {}
-                Command::SimulatedDelay(duration) => {
-                    tokio::time::sleep(duration).await;
-
-                    // `.send().await` can fail if the receiver has been
-                    // dropped (e.g., the app is shutting down mid-task).
-                    // That's an EXPECTED race during shutdown, not a bug —
-                    // so we log at debug level and move on, we do NOT
-                    // panic or `.unwrap()`.
-                    if let Err(err) = tx.send(Message::DebugTaskCompleted).await {
-                        tracing::debug!(
-                            error = %err,
-                            "failed to send DebugTaskCompleted; \
-                             receiver likely dropped during shutdown"
-                        );
-                    }
-                }
-            }
-        });
+/// Dispatches every command in `commands` via [`dispatch`], cloning the
+/// sender once per command since each spawned task needs its own owned
+/// clone.
+pub fn dispatch_all(commands: Vec<Command>, sender: &mpsc::Sender<Message>) {
+    for command in commands {
+        dispatch(command, sender.clone());
     }
 }
 
@@ -63,23 +44,50 @@ impl CommandExecutor {
 mod tests {
     use super::*;
     use std::time::Duration;
-    use tokio::sync::mpsc;
 
     #[tokio::test(start_paused = true)]
-    async fn simulated_delay_command_sends_debug_task_completed() {
-        let (tx, mut rx) = mpsc::channel::<Message>(8);
-        let executor = CommandExecutor::new(tx);
+    async fn simulated_delay_sends_debug_task_completed_after_delay() {
+        let (tx, mut rx) = mpsc::channel(8);
+        dispatch(Command::SimulatedDelay(Duration::from_secs(2)), tx);
 
-        executor.dispatch(Command::SimulatedDelay(Duration::from_secs(2)));
-
-        // Nothing should have arrived yet — virtual time hasn't moved.
+        // Nothing should have arrived yet — the delay hasn't elapsed.
         assert!(rx.try_recv().is_err());
 
-        // Fast-forward virtual time instantly, no real wall-clock wait.
         tokio::time::advance(Duration::from_secs(2)).await;
+        // Yield so the spawned task actually gets scheduled after the
+        // simulated time advance.
+        tokio::task::yield_now().await;
 
-        // Give the spawned task a chance to run now that its sleep resolved.
-        let received = rx.recv().await.expect("expected a message");
-        assert!(matches!(received, Message::DebugTaskCompleted));
+        let msg = rx.recv().await.expect("expected a message after the delay");
+        assert!(matches!(msg, Message::DebugTaskCompleted));
+    }
+
+    #[tokio::test]
+    async fn none_command_does_not_send_anything() {
+        let (tx, mut rx) = mpsc::channel(8);
+        dispatch(Command::None, tx);
+        tokio::task::yield_now().await;
+        assert!(rx.try_recv().is_err());
+    }
+
+    #[tokio::test(start_paused = true)]
+    async fn dispatch_all_handles_multiple_commands_independently() {
+        let (tx, mut rx) = mpsc::channel(8);
+        dispatch_all(
+            vec![
+                Command::None,
+                Command::SimulatedDelay(Duration::from_millis(100)),
+                Command::SimulatedDelay(Duration::from_millis(100)),
+            ],
+            &tx,
+        );
+
+        tokio::time::advance(Duration::from_millis(100)).await;
+        tokio::task::yield_now().await;
+
+        let first = rx.recv().await.expect("expected first completion");
+        let second = rx.recv().await.expect("expected second completion");
+        assert!(matches!(first, Message::DebugTaskCompleted));
+        assert!(matches!(second, Message::DebugTaskCompleted));
     }
 }

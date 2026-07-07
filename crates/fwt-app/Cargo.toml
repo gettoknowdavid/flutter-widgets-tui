@@ -8,5 +8,9 @@ publish = false
 
 [dependencies]
 crossterm = { workspace = true }
+tokio = { workspace = true }
+
+[dev-dependencies]
+pretty_assertions = "1.4.1"
+rstest = "0.26.1"
 tokio = { workspace = true, features = ["test-util"] }
-tracing = { workspace = true }
