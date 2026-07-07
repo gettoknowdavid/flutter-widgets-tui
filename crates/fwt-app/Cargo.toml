@@ -7,5 +7,6 @@ license.workspace = true
 publish = false
 
 [dependencies]
-fwt-domain = { path = "../fwt-domain" }
-tokio = { workspace = true }
+crossterm = { workspace = true }
+tokio = { workspace = true, features = ["test-util"] }
+tracing = { workspace = true }

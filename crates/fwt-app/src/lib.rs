@@ -10,3 +10,9 @@
 //! `fwt-cli`, the composition root. Depending on concretes here would
 //! defeat the entire point of the ports-and-adapters architecture: the
 //! ability to test this crate against fakes/mocks with zero real I/O.
+
+pub mod command;
+pub mod executor;
+pub mod message;
+pub mod outcome;
+pub mod state;

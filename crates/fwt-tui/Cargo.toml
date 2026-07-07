@@ -7,9 +7,10 @@ license.workspace = true
 publish = false
 
 [dependencies]
-crossterm = { workspace = true }
+crossterm = { workspace = true, features = ["event-stream"] }
+futures-util = { workspace = true }
 fwt-app = { path = "../fwt-app" }
-fwt-domain = { path = "../fwt-domain" }
 ratatui = { workspace = true }
 thiserror = { workspace = true }
+tokio = { workspace = true }
 tracing = { workspace = true }
