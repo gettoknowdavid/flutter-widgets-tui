@@ -14,6 +14,9 @@
 pub mod app;
 pub mod panic_hook;
 pub mod terminal;
+pub mod theme;
+pub mod widgets;
+
 pub use terminal::{TerminalError, TerminalGuard};
 
 #[derive(Debug, thiserror::Error)]

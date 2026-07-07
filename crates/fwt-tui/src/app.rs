@@ -27,6 +27,8 @@ use fwt_app::state::{update, AppState};
 use tokio::sync::mpsc;
 
 use crate::terminal::TerminalGuard;
+use crate::theme::Theme;
+use crate::widgets::app_shell::render_app_shell;
 
 /// How often the tick timer fires. Sufficient for future spinner/
 /// connectivity-status animation (TRD Section 2.4) without meaningfully
@@ -166,10 +168,11 @@ async fn wait_for_terminate_signal() {
 /// exist so the dirty-flag wiring (only redraw when `update()` says so)
 /// is provably connected to a real `Terminal::draw` call, not just to a
 /// TODO comment.
-fn render(guard: &mut TerminalGuard, _state: &AppState) -> Result<(), EventLoopError> {
-    guard.terminal.draw(|_frame| {
-        // Ticket 005 replaces this closure body with
-        // `render_app_shell(frame, frame.area(), state, theme)`.
+fn render(guard: &mut TerminalGuard, state: &AppState) -> Result<(), EventLoopError> {
+    let theme = Theme::default();
+    guard.terminal.draw(|frame| {
+        let area = frame.area();
+        let _content_rect = render_app_shell(frame, area, state, &theme);
     })?;
     Ok(())
 }

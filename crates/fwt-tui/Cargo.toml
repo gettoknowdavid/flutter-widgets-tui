@@ -14,3 +14,4 @@ ratatui = { workspace = true }
 thiserror = { workspace = true }
 tokio = { workspace = true }
 tracing = { workspace = true }
+insta = "1.48.0"
