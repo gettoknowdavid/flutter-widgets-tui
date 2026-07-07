@@ -11,6 +11,8 @@ name = "fwt"
 path = "src/main.rs"
 
 [dependencies]
+clap = { workspace = true }
+color-eyre = "0.6.5"
 fwt-app = { path = "../fwt-app" }
 fwt-domain = { path = "../fwt-domain" }
 fwt-infra = { path = "../fwt-infra" }
@@ -20,3 +22,8 @@ tracing = { workspace = true }
 tracing-appender = "0.2.5"
 tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt"] }
 directories = "6.0.0"
+
+[dev-dependencies]
+assert_cmd = "2.2.2"
+predicates = "3.1.4"
+tempfile = "3.27.0"
