@@ -1,0 +1,17 @@
+name: catalog_extractor
+description: Extracts Flutter widget metadata from the Flutter SDK source into catalog.json.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  analyzer: 13.3.0
+  args: ^2.7.0
+  dartdoc: 9.0.8
+  path: ^1.9.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6

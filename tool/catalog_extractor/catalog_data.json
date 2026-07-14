@@ -1,0 +1,4688 @@
+[
+  {
+    "widget_name": "CupertinoActionSheet",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style action sheet."
+  },
+  {
+    "widget_name": "CupertinoActionSheetAction",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "The content of a typical action button in a [CupertinoActionSheet]."
+  },
+  {
+    "widget_name": "CupertinoActivityIndicator",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style activity indicator that spins clockwise."
+  },
+  {
+    "widget_name": "CupertinoAdaptiveTextSelectionToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "The default Cupertino context menu for text selection for the current"
+  },
+  {
+    "widget_name": "CupertinoAlertDialog",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style alert dialog."
+  },
+  {
+    "widget_name": "CupertinoApp",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An application that uses Cupertino design."
+  },
+  {
+    "widget_name": "CupertinoButton",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style button."
+  },
+  {
+    "widget_name": "CupertinoCheckbox",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A macOS style checkbox."
+  },
+  {
+    "widget_name": "CupertinoColors",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "CupertinoContextMenu",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A full-screen modal route that opens when the [child] is long-pressed."
+  },
+  {
+    "widget_name": "CupertinoContextMenuAction",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A button in a _ContextMenuSheet."
+  },
+  {
+    "widget_name": "CupertinoDatePicker",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A date picker widget in iOS style."
+  },
+  {
+    "widget_name": "CupertinoDesktopTextSelectionControls",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "Desktop Cupertino styled text selection controls."
+  },
+  {
+    "widget_name": "CupertinoDesktopTextSelectionToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A macOS-style text selection toolbar."
+  },
+  {
+    "widget_name": "CupertinoDesktopTextSelectionToolbarButton",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A button in the style of the Mac context menu buttons."
+  },
+  {
+    "widget_name": "CupertinoDialogAction",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A button typically used in a [CupertinoAlertDialog]."
+  },
+  {
+    "widget_name": "CupertinoDialogRoute",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A dialog route that shows an iOS-style dialog."
+  },
+  {
+    "widget_name": "CupertinoDynamicColor",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "CupertinoFormRow",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style form row."
+  },
+  {
+    "widget_name": "CupertinoFormSection",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style form section."
+  },
+  {
+    "widget_name": "CupertinoFullscreenDialogTransition",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style transition used for summoning fullscreen dialogs."
+  },
+  {
+    "widget_name": "CupertinoThemeData",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "Styling specifications for a [CupertinoTheme]."
+  },
+  {
+    "widget_name": "CupertinoListSection",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style list section."
+  },
+  {
+    "widget_name": "CupertinoListTile",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style list tile."
+  },
+  {
+    "widget_name": "CupertinoListTileChevron",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A typical iOS trailing widget used to denote that a `CupertinoListTile` is a"
+  },
+  {
+    "widget_name": "CupertinoLocalizations",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "CupertinoMagnifier",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A [RawMagnifier] used for magnifying text in cases where a user's"
+  },
+  {
+    "widget_name": "CupertinoModalPopupRoute",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A route that shows a modal iOS-style popup that slides up from the"
+  },
+  {
+    "widget_name": "CupertinoNavigationBar",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-styled navigation bar."
+  },
+  {
+    "widget_name": "CupertinoNavigationBarBackButton",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A nav bar back button typically used in [CupertinoNavigationBar]."
+  },
+  {
+    "widget_name": "CupertinoPage",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A page that creates a cupertino style [PageRoute]."
+  },
+  {
+    "widget_name": "CupertinoPageRoute",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A modal route that replaces the entire screen with an iOS transition."
+  },
+  {
+    "widget_name": "CupertinoPageScaffold",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "Implements a single iOS application page's layout."
+  },
+  {
+    "widget_name": "CupertinoPageTransition",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "Provides an iOS-style page transition animation."
+  },
+  {
+    "widget_name": "CupertinoPicker",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-styled picker."
+  },
+  {
+    "widget_name": "CupertinoPickerDefaultSelectionOverlay",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A default selection overlay for [CupertinoPicker]s."
+  },
+  {
+    "widget_name": "CupertinoPopupSurface",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style component for creating modal overlays like dialogs and action"
+  },
+  {
+    "widget_name": "CupertinoRadio",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A widget that builds a [RawRadio] with a macOS-style UI."
+  },
+  {
+    "widget_name": "CupertinoScrollbar",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS style scrollbar."
+  },
+  {
+    "widget_name": "CupertinoScrollBehavior",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "Describes how [Scrollable] widgets behave for [CupertinoApp]s."
+  },
+  {
+    "widget_name": "CupertinoSearchTextField",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A [CupertinoTextField] that mimics the look and behavior of UIKit's"
+  },
+  {
+    "widget_name": "CupertinoSlider",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style slider."
+  },
+  {
+    "widget_name": "CupertinoSlidingSegmentedControl",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS 13 style segmented control."
+  },
+  {
+    "widget_name": "CupertinoSliverNavigationBar",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-styled navigation bar with iOS-11-style large titles using slivers."
+  },
+  {
+    "widget_name": "CupertinoSliverRefreshControl",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A sliver widget implementing the iOS-style pull to refresh content control."
+  },
+  {
+    "widget_name": "CupertinoSpellCheckSuggestionsToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "The default spell check suggestions toolbar for iOS."
+  },
+  {
+    "widget_name": "CupertinoSwitch",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style switch."
+  },
+  {
+    "widget_name": "CupertinoTabBar",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-styled bottom navigation tab bar."
+  },
+  {
+    "widget_name": "CupertinoTabController",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "Coordinates tab selection between a [CupertinoTabBar] and a [CupertinoTabScaffold]."
+  },
+  {
+    "widget_name": "CupertinoTabScaffold",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "Implements a tabbed iOS application's root layout and behavior structure."
+  },
+  {
+    "widget_name": "CupertinoTabView",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A single tab view with its own [Navigator] state and history."
+  },
+  {
+    "widget_name": "CupertinoTextField",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style text field."
+  },
+  {
+    "widget_name": "CupertinoTextFormFieldRow",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "Creates a [CupertinoFormRow] containing a [FormField] that wraps"
+  },
+  {
+    "widget_name": "CupertinoTextMagnifier",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A [CupertinoMagnifier] used for magnifying text in cases where a user's"
+  },
+  {
+    "widget_name": "CupertinoTextSelectionControls",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "iOS Cupertino styled text selection controls."
+  },
+  {
+    "widget_name": "CupertinoTextSelectionToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "An iOS-style text selection toolbar."
+  },
+  {
+    "widget_name": "CupertinoTextSelectionToolbarButton",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A button in the style of the iOS text selection toolbar buttons."
+  },
+  {
+    "widget_name": "CupertinoTextThemeData",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "CupertinoTheme",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "Applies a visual styling theme to descendant Cupertino widgets."
+  },
+  {
+    "widget_name": "CupertinoThumbPainter",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "CupertinoTimerPicker",
+    "top_level": "Design Systems",
+    "sub_category": "cupertino",
+    "summary": "A countdown timer picker in iOS style."
+  },
+  {
+    "widget_name": "ButtonStyle",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "FloatingActionButton",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design floating action button."
+  },
+  {
+    "widget_name": "IconButton",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design icon button."
+  },
+  {
+    "widget_name": "SegmentedButton",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material button that allows the user to select from limited set of options."
+  },
+  {
+    "widget_name": "Badge",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design \"badge\"."
+  },
+  {
+    "widget_name": "LinearProgressIndicator",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design linear progress indicator, also known as a progress bar."
+  },
+  {
+    "widget_name": "SnackBar",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A lightweight message with an optional action which briefly displays at the"
+  },
+  {
+    "widget_name": "AlertDialog",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design alert dialog."
+  },
+  {
+    "widget_name": "BottomSheet",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design bottom sheet."
+  },
+  {
+    "widget_name": "Card",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design card: a panel with slightly rounded corners and an"
+  },
+  {
+    "widget_name": "Divider",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A thin horizontal line, with padding on either side."
+  },
+  {
+    "widget_name": "ListTile",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A single fixed-height row that typically contains some text as well as"
+  },
+  {
+    "widget_name": "AppBar",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design app bar."
+  },
+  {
+    "widget_name": "BottomAppBar",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A container that is typically used with [Scaffold.bottomNavigationBar]."
+  },
+  {
+    "widget_name": "NavigationBar",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "Material 3 Navigation Bar component."
+  },
+  {
+    "widget_name": "NavigationDrawer",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "Material Design Navigation Drawer component."
+  },
+  {
+    "widget_name": "NavigationRail",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design widget that is meant to be displayed at the left or right of an"
+  },
+  {
+    "widget_name": "TabBar",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design primary tab bar."
+  },
+  {
+    "widget_name": "Checkbox",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design checkbox."
+  },
+  {
+    "widget_name": "Chip",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design chip."
+  },
+  {
+    "widget_name": "MenuAnchor",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A widget used to mark the \"anchor\" for a set of submenus, defining the"
+  },
+  {
+    "widget_name": "Radio",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design radio button."
+  },
+  {
+    "widget_name": "Slider",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design slider."
+  },
+  {
+    "widget_name": "Switch",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design switch."
+  },
+  {
+    "widget_name": "TextField",
+    "top_level": "Design Systems",
+    "sub_category": "material",
+    "summary": "A Material Design text field."
+  },
+  {
+    "widget_name": "ExcludeSemantics",
+    "top_level": "Base Widgets",
+    "sub_category": "accessibility",
+    "summary": "A widget that drops all the semantics of its descendants."
+  },
+  {
+    "widget_name": "MergeSemantics",
+    "top_level": "Base Widgets",
+    "sub_category": "accessibility",
+    "summary": "A widget that merges the semantics of its descendants."
+  },
+  {
+    "widget_name": "Semantics",
+    "top_level": "Base Widgets",
+    "sub_category": "accessibility",
+    "summary": "A widget that annotates the widget tree with a description of the meaning of"
+  },
+  {
+    "widget_name": "AlignTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of an [Align] that animates its [Align.alignment] property."
+  },
+  {
+    "widget_name": "AnimatedAlign",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of [Align] which automatically transitions the child's"
+  },
+  {
+    "widget_name": "AnimatedBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "A general-purpose widget for building animations."
+  },
+  {
+    "widget_name": "AnimatedContainer",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of [Container] that gradually changes its values over a period of time."
+  },
+  {
+    "widget_name": "AnimatedCrossFade",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "A widget that cross-fades between two given children and animates itself"
+  },
+  {
+    "widget_name": "AnimatedDefaultTextStyle",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of [DefaultTextStyle] which automatically transitions the"
+  },
+  {
+    "widget_name": "AnimatedList",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "A scrolling container that animates items when they are inserted or removed."
+  },
+  {
+    "widget_name": "AnimatedListState",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "The [AnimatedListState] for [AnimatedList], a scrolling list container that"
+  },
+  {
+    "widget_name": "AnimatedModalBarrier",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "A widget that prevents the user from interacting with widgets behind itself,"
+  },
+  {
+    "widget_name": "AnimatedOpacity",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of [Opacity] which automatically transitions the child's"
+  },
+  {
+    "widget_name": "AnimatedPhysicalModel",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of [PhysicalModel]."
+  },
+  {
+    "widget_name": "AnimatedPositioned",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of [Positioned] which automatically transitions the child's"
+  },
+  {
+    "widget_name": "AnimatedScale",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of [Transform.scale] which automatically transitions the child's"
+  },
+  {
+    "widget_name": "AnimatedSize",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated widget that automatically transitions its size over a given"
+  },
+  {
+    "widget_name": "AnimatedWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ImplicitlyAnimatedWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "DecoratedBoxTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of a [DecoratedBox] that animates the different properties"
+  },
+  {
+    "widget_name": "DefaultTextStyleTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of a [DefaultTextStyle] that animates the different properties"
+  },
+  {
+    "widget_name": "FadeTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animates the opacity of a widget."
+  },
+  {
+    "widget_name": "Hero",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "A widget that marks its child as being a candidate for"
+  },
+  {
+    "widget_name": "MatrixTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animates the [Matrix4] of a transformed widget."
+  },
+  {
+    "widget_name": "PositionedTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of [Positioned] which takes a specific"
+  },
+  {
+    "widget_name": "RelativePositionedTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animated version of [Positioned] which transitions the child's position"
+  },
+  {
+    "widget_name": "RepeatingAnimationBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Widget that animates an [Animatable] value and repeats indefinitely."
+  },
+  {
+    "widget_name": "RotationTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animates the rotation of a widget."
+  },
+  {
+    "widget_name": "ScaleTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animates the scale of a transformed widget."
+  },
+  {
+    "widget_name": "SizeTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animates its own size and clips and aligns its child."
+  },
+  {
+    "widget_name": "SlideTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animates the position of a widget relative to its normal position."
+  },
+  {
+    "widget_name": "SliverFadeTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "animation",
+    "summary": "Animates the opacity of a sliver widget."
+  },
+  {
+    "widget_name": "AssetBundle",
+    "top_level": "Base Widgets",
+    "sub_category": "assets",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "Icon",
+    "top_level": "Base Widgets",
+    "sub_category": "assets",
+    "summary": "A graphical icon widget drawn with a glyph from a font described in"
+  },
+  {
+    "widget_name": "Image",
+    "top_level": "Base Widgets",
+    "sub_category": "assets",
+    "summary": "A widget that displays an image."
+  },
+  {
+    "widget_name": "RawImage",
+    "top_level": "Base Widgets",
+    "sub_category": "assets",
+    "summary": "A widget that displays a [dart:ui.Image] directly."
+  },
+  {
+    "widget_name": "FutureBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "async",
+    "summary": "A widget that builds itself based on the latest snapshot of interaction with"
+  },
+  {
+    "widget_name": "StreamBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "async",
+    "summary": "Widget that builds itself based on the latest snapshot of interaction with"
+  },
+  {
+    "widget_name": "Column",
+    "top_level": "Base Widgets",
+    "sub_category": "basics",
+    "summary": "A widget that displays its children in a vertical array."
+  },
+  {
+    "widget_name": "Container",
+    "top_level": "Base Widgets",
+    "sub_category": "basics",
+    "summary": "A convenience widget that combines common painting, positioning, and sizing"
+  },
+  {
+    "widget_name": "ElevatedButton",
+    "top_level": "Base Widgets",
+    "sub_category": "basics",
+    "summary": "A Material Design \"elevated button\"."
+  },
+  {
+    "widget_name": "FlutterLogo",
+    "top_level": "Base Widgets",
+    "sub_category": "basics",
+    "summary": "The Flutter logo, in widget form. This widget respects the [IconTheme]."
+  },
+  {
+    "widget_name": "Placeholder",
+    "top_level": "Base Widgets",
+    "sub_category": "basics",
+    "summary": "A widget that draws a box that represents where other widgets will one day"
+  },
+  {
+    "widget_name": "Row",
+    "top_level": "Base Widgets",
+    "sub_category": "basics",
+    "summary": "A widget that displays its children in a horizontal array."
+  },
+  {
+    "widget_name": "Scaffold",
+    "top_level": "Base Widgets",
+    "sub_category": "basics",
+    "summary": "Implements the basic Material Design visual layout structure."
+  },
+  {
+    "widget_name": "Text",
+    "top_level": "Base Widgets",
+    "sub_category": "basics",
+    "summary": "A run of text with a single style."
+  },
+  {
+    "widget_name": "Autocomplete",
+    "top_level": "Base Widgets",
+    "sub_category": "input",
+    "summary": "This example shows how to create a very basic Autocomplete widget using the"
+  },
+  {
+    "widget_name": "Form",
+    "top_level": "Base Widgets",
+    "sub_category": "input",
+    "summary": "An optional container for grouping together multiple form field widgets"
+  },
+  {
+    "widget_name": "FormField",
+    "top_level": "Base Widgets",
+    "sub_category": "input",
+    "summary": "A single form field."
+  },
+  {
+    "widget_name": "KeyboardListener",
+    "top_level": "Base Widgets",
+    "sub_category": "input",
+    "summary": "A widget that calls a callback whenever the user presses or releases a key"
+  },
+  {
+    "widget_name": "AbsorbPointer",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A widget that absorbs pointers during hit testing."
+  },
+  {
+    "widget_name": "Dismissible",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A widget that can be dismissed by dragging in the indicated [direction]."
+  },
+  {
+    "widget_name": "DragTarget",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A widget that receives data when a [Draggable] widget is dropped."
+  },
+  {
+    "widget_name": "Draggable",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A widget that can be dragged from to a [DragTarget]."
+  },
+  {
+    "widget_name": "DraggableScrollableSheet",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A container for a [Scrollable] that responds to drag gestures by resizing"
+  },
+  {
+    "widget_name": "GestureDetector",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A widget that detects gestures."
+  },
+  {
+    "widget_name": "IgnorePointer",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A widget that is invisible during hit testing."
+  },
+  {
+    "widget_name": "InteractiveViewer",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A widget that enables pan and zoom interactions with its child."
+  },
+  {
+    "widget_name": "LongPressDraggable",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "Makes its child draggable starting from long press."
+  },
+  {
+    "widget_name": "Scrollable",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A widget that manages scrolling in one dimension and informs the [Viewport]"
+  },
+  {
+    "widget_name": "Navigator",
+    "top_level": "Base Widgets",
+    "sub_category": "interaction",
+    "summary": "A widget that manages a set of child widgets with a stack discipline."
+  },
+  {
+    "widget_name": "Align",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that aligns its child within itself and optionally sizes itself"
+  },
+  {
+    "widget_name": "AspectRatio",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that attempts to size the child to a specific aspect ratio."
+  },
+  {
+    "widget_name": "Baseline",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that positions its child according to the child's baseline."
+  },
+  {
+    "widget_name": "Center",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that centers its child within itself."
+  },
+  {
+    "widget_name": "ConstrainedBox",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that imposes additional constraints on its child."
+  },
+  {
+    "widget_name": "CustomSingleChildLayout",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that defers the layout of its single child to a delegate."
+  },
+  {
+    "widget_name": "Expanded",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that expands a child of a [Row], [Column], or [Flex]"
+  },
+  {
+    "widget_name": "FittedBox",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "Scales and positions its child within itself according to [fit]."
+  },
+  {
+    "widget_name": "FractionallySizedBox",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that sizes its child to a fraction of the total available space."
+  },
+  {
+    "widget_name": "IntrinsicHeight",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that sizes its child to the child's intrinsic height."
+  },
+  {
+    "widget_name": "IntrinsicWidth",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that sizes its child to the child's maximum intrinsic width."
+  },
+  {
+    "widget_name": "LimitedBox",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A box that limits its size only when it's unconstrained."
+  },
+  {
+    "widget_name": "Offstage",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that lays the child out as if it was in the tree, but without"
+  },
+  {
+    "widget_name": "OverflowBox",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that imposes different constraints on its child than it gets"
+  },
+  {
+    "widget_name": "Padding",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that insets its child by the given padding."
+  },
+  {
+    "widget_name": "SizedBox",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A box with a specified size."
+  },
+  {
+    "widget_name": "SizedOverflowBox",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that is a specific size but passes its original constraints"
+  },
+  {
+    "widget_name": "Transform",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that applies a transformation before painting its child."
+  },
+  {
+    "widget_name": "CustomMultiChildLayout",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that uses a delegate to size and position multiple children."
+  },
+  {
+    "widget_name": "CarouselView",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A Material Design carousel widget."
+  },
+  {
+    "widget_name": "Flow",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that sizes and positions children efficiently, according to the"
+  },
+  {
+    "widget_name": "GridView",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A scrollable, 2D array of widgets."
+  },
+  {
+    "widget_name": "IndexedStack",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A [Stack] that shows a single child from a list of children."
+  },
+  {
+    "widget_name": "LayoutBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "Builds a widget tree that can depend on the parent widget's size."
+  },
+  {
+    "widget_name": "ListBody",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that arranges its children sequentially along a given axis, forcing"
+  },
+  {
+    "widget_name": "ListView",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A scrollable list of widgets arranged linearly."
+  },
+  {
+    "widget_name": "OverflowBar",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that lays out its [children] in a row unless they"
+  },
+  {
+    "widget_name": "Stack",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that positions its children relative to the edges of its box."
+  },
+  {
+    "widget_name": "Table",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that uses the table layout algorithm for its children."
+  },
+  {
+    "widget_name": "Wrap",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A widget that displays its children in multiple horizontal or vertical runs."
+  },
+  {
+    "widget_name": "CustomScrollView",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A [ScrollView] that creates custom scroll effects using [slivers]."
+  },
+  {
+    "widget_name": "SliverAppBar",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A Material Design app bar that integrates with a [CustomScrollView]."
+  },
+  {
+    "widget_name": "SliverChildBuilderDelegate",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A delegate that supplies children for slivers using a builder callback."
+  },
+  {
+    "widget_name": "SliverChildListDelegate",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A delegate that supplies children for slivers using an explicit list."
+  },
+  {
+    "widget_name": "SliverFillRemaining",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A sliver that contains a single box child that fills the remaining space in"
+  },
+  {
+    "widget_name": "SliverFixedExtentList",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A sliver that places multiple box children with the same main axis extent in"
+  },
+  {
+    "widget_name": "SliverGrid",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A sliver that places multiple box children in a two dimensional arrangement."
+  },
+  {
+    "widget_name": "SliverList",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A sliver that places multiple box children in a linear array along the main"
+  },
+  {
+    "widget_name": "SliverPadding",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A sliver that applies padding on each side of another sliver."
+  },
+  {
+    "widget_name": "SliverPersistentHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A sliver whose size varies when the sliver is scrolled to the edge"
+  },
+  {
+    "widget_name": "SliverToBoxAdapter",
+    "top_level": "Base Widgets",
+    "sub_category": "layout",
+    "summary": "A sliver that contains a single box widget."
+  },
+  {
+    "widget_name": "BackdropFilter",
+    "top_level": "Base Widgets",
+    "sub_category": "painting",
+    "summary": "A widget that applies a filter to the existing painted content and then"
+  },
+  {
+    "widget_name": "ClipOval",
+    "top_level": "Base Widgets",
+    "sub_category": "painting",
+    "summary": "A widget that clips its child using an oval."
+  },
+  {
+    "widget_name": "ClipPath",
+    "top_level": "Base Widgets",
+    "sub_category": "painting",
+    "summary": "A widget that clips its child using a path."
+  },
+  {
+    "widget_name": "ClipRect",
+    "top_level": "Base Widgets",
+    "sub_category": "painting",
+    "summary": "A widget that clips its child using a rectangle."
+  },
+  {
+    "widget_name": "CustomPaint",
+    "top_level": "Base Widgets",
+    "sub_category": "painting",
+    "summary": "A widget that provides a canvas on which to draw during the paint phase."
+  },
+  {
+    "widget_name": "DecoratedBox",
+    "top_level": "Base Widgets",
+    "sub_category": "painting",
+    "summary": "A widget that paints a [Decoration] either before or after its child paints."
+  },
+  {
+    "widget_name": "FractionalTranslation",
+    "top_level": "Base Widgets",
+    "sub_category": "painting",
+    "summary": "Applies a translation transformation before painting its child."
+  },
+  {
+    "widget_name": "Opacity",
+    "top_level": "Base Widgets",
+    "sub_category": "painting",
+    "summary": "A widget that makes its child partially transparent."
+  },
+  {
+    "widget_name": "RotatedBox",
+    "top_level": "Base Widgets",
+    "sub_category": "painting",
+    "summary": "A widget that rotates its child by a integral number of quarter turns."
+  },
+  {
+    "widget_name": "NestedScrollView",
+    "top_level": "Base Widgets",
+    "sub_category": "scrolling",
+    "summary": "Currently, [NestedScrollView] does not support stretching the outer"
+  },
+  {
+    "widget_name": "NotificationListener",
+    "top_level": "Base Widgets",
+    "sub_category": "scrolling",
+    "summary": "A widget that listens for [Notification]s bubbling up the tree."
+  },
+  {
+    "widget_name": "PageView",
+    "top_level": "Base Widgets",
+    "sub_category": "scrolling",
+    "summary": "A scrollable list that works page by page."
+  },
+  {
+    "widget_name": "RefreshIndicator",
+    "top_level": "Base Widgets",
+    "sub_category": "scrolling",
+    "summary": "A widget that supports the Material \"swipe to refresh\" idiom."
+  },
+  {
+    "widget_name": "ReorderableListView",
+    "top_level": "Base Widgets",
+    "sub_category": "scrolling",
+    "summary": "A list whose items the user can interactively reorder by dragging."
+  },
+  {
+    "widget_name": "ScrollConfiguration",
+    "top_level": "Base Widgets",
+    "sub_category": "scrolling",
+    "summary": "Controls how [Scrollable] widgets behave in a subtree."
+  },
+  {
+    "widget_name": "Scrollbar",
+    "top_level": "Base Widgets",
+    "sub_category": "scrolling",
+    "summary": "A Material Design scrollbar."
+  },
+  {
+    "widget_name": "SingleChildScrollView",
+    "top_level": "Base Widgets",
+    "sub_category": "scrolling",
+    "summary": "A box in which a single widget can be scrolled."
+  },
+  {
+    "widget_name": "MediaQuery",
+    "top_level": "Base Widgets",
+    "sub_category": "styling",
+    "summary": "Establishes a subtree in which media queries resolve to the given data."
+  },
+  {
+    "widget_name": "Theme",
+    "top_level": "Base Widgets",
+    "sub_category": "styling",
+    "summary": "Applies a theme to descendant widgets."
+  },
+  {
+    "widget_name": "DefaultTextStyle",
+    "top_level": "Base Widgets",
+    "sub_category": "text",
+    "summary": "The text style to apply to descendant [Text] widgets which don't have an"
+  },
+  {
+    "widget_name": "RichText",
+    "top_level": "Base Widgets",
+    "sub_category": "text",
+    "summary": "A paragraph of rich text."
+  },
+  {
+    "widget_name": "CupertinoLinearActivityIndicator",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "An iOS-style linear activity indicator."
+  },
+  {
+    "widget_name": "_DecoyChild",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ContextMenuRouteStatic",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ContextMenuSheet",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ContextMenuAlignedChildren",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "CupertinoFocusHalo",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "Applies an iOS-style focus border around its child when any of child focus nodes gain focus."
+  },
+  {
+    "widget_name": "_CupertinoDesktopTextSelectionControlsToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ActionSheetGestureDetector",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ActionSheetActionContent",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ActionSheetButtonBackground",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_Divider",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_OverscrollBackground",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ActionSheetActionSection",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ActionSheetMainSheet",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoAlertContentSection",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoAlertActionSection",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AlertDialogButtonBackground",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AlertDialogActionsLayout",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_PriorityColumn",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "CupertinoExpansionTile",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A single-line [CupertinoListTile] with an expansion arrow icon that expands"
+  },
+  {
+    "widget_name": "CupertinoUserInterfaceLevel",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "Establishes a subtree in which [CupertinoUserInterfaceLevel.of] resolves to"
+  },
+  {
+    "widget_name": "_AnchorScope",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "CupertinoMenuAnchor",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A widget used to mark the \"anchor\" for a menu, defining the rectangle used"
+  },
+  {
+    "widget_name": "_MenuOverlay",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoMenuImplicitDivider",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A horizontal divider placed between each menu item in a"
+  },
+  {
+    "widget_name": "CupertinoMenuDivider",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A large horizontal divider that is used to separate [CupertinoMenuItem]s in"
+  },
+  {
+    "widget_name": "CupertinoMenuItem",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A menu item for use in a [CupertinoMenuAnchor]."
+  },
+  {
+    "widget_name": "_CupertinoMenuItemLabel",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AlignMidpoint",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A widget that positions the midpoint of its child at an alignment within"
+  },
+  {
+    "widget_name": "_CupertinoMenuItemInteractionHandler",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SwipeTarget",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A widget that triggers callbacks when a pointer enters or leaves while down."
+  },
+  {
+    "widget_name": "_SwipeScope",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SwipeRegion",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SwipeSurface",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "An area that can initiate swiping."
+  },
+  {
+    "widget_name": "_FixedSizeSlidingTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_LargeTitle",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "The large title of the navigation bar."
+  },
+  {
+    "widget_name": "_PersistentNavigationBar",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "The top part of the navigation bar that's never scrolled away."
+  },
+  {
+    "widget_name": "_BackChevron",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_BackLabel",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A widget that shows next to the back chevron when `automaticallyImplyLeading`"
+  },
+  {
+    "widget_name": "_CancelButton",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "The 'Cancel' button next to the search field in a"
+  },
+  {
+    "widget_name": "_InactiveSearchableBottom",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "The bottom of a [CupertinoSliverNavigationBar.search] when the search field"
+  },
+  {
+    "widget_name": "_ActiveSearchableBottom",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "The bottom of a [CupertinoSliverNavigationBar.search] when the search field"
+  },
+  {
+    "widget_name": "_TransitionableNavigationBar",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "This should always be the first child of Hero widgets."
+  },
+  {
+    "widget_name": "_NavigationBarTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "This class represents the widget that will be in the Hero flight instead of"
+  },
+  {
+    "widget_name": "CupertinoPageScaffoldBackgroundColor",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "[InheritedWidget] indicating what the current scaffold background color is for its children."
+  },
+  {
+    "widget_name": "_CupertinoPickerSemantics",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_RadioPaint",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoSliverRefresh",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoBackGestureDetector",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "This is the widget side of [_CupertinoBackGestureController]."
+  },
+  {
+    "widget_name": "CupertinoSegmentedControl",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "An iOS-style segmented control."
+  },
+  {
+    "widget_name": "_SegmentButton",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A wrapper widget that implements RadioClient for each segment button."
+  },
+  {
+    "widget_name": "_SegmentedControlRenderWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "CupertinoSheetTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "Provides an iOS-style sheet transition."
+  },
+  {
+    "widget_name": "_StretchDragControllerProvider",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoSheetScope",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoDragGestureDetector",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoDraggableScrollableSheet",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoSliderRenderObjectWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_Segment",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SegmentSeparator",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SlidingSegmentButton",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A wrapper widget that implements RadioClient for each segment button in sliding segmented control."
+  },
+  {
+    "widget_name": "_TabSwitchingView",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "A widget laying out multiple tabs with only one active tab being built"
+  },
+  {
+    "widget_name": "_CupertinoTextSelectionControlsToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoTextSelectionToolbarShape",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoTextSelectionToolbarContent",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CupertinoTextSelectionToolbarItems",
+    "top_level": "Design Systems",
+    "sub_category": "Cupertino",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "AboutListTile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A [ListTile] that shows an about box."
+  },
+  {
+    "widget_name": "AboutDialog",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "An about box. This is a dialog box with the application's icon, name,"
+  },
+  {
+    "widget_name": "LicensePage",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A page that shows licenses for software used by the application."
+  },
+  {
+    "widget_name": "_AboutProgram",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_PackagesView",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_PackageListTile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_PackageLicensePage",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_PackageLicensePageTitle",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_MasterDetailFlow",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Master Detail Flow widget. Depending on screen width it builds either a"
+  },
+  {
+    "widget_name": "_MasterPage",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_MasterDetailScaffold",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_DetailView",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ActionIcon",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "BackButtonIcon",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A \"back\" icon that's appropriate for the current [TargetPlatform]."
+  },
+  {
+    "widget_name": "CloseButtonIcon",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A \"close\" icon that's appropriate for the current [TargetPlatform]."
+  },
+  {
+    "widget_name": "DrawerButtonIcon",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A \"drawer\" icon that's appropriate for the current [TargetPlatform]."
+  },
+  {
+    "widget_name": "EndDrawerButtonIcon",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A \"end drawer\" icon that's appropriate for the current [TargetPlatform]."
+  },
+  {
+    "widget_name": "ActionChip",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "See also:"
+  },
+  {
+    "widget_name": "AdaptiveTextSelectionToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "The default context menu for text selection for the current platform."
+  },
+  {
+    "widget_name": "AnimatedIcon",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Shows an animated icon at a given animation [progress]."
+  },
+  {
+    "widget_name": "MaterialApp",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "An application that uses Material Design."
+  },
+  {
+    "widget_name": "_AppBarTitleBox",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ScrollUnderFlexibleSpace",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ExpandedTitleWithPadding",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AutocompleteField",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AutocompleteOptions",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AutocompleteOptionsList",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_Badge",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_IntrinsicHorizontalStadium",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A widget size itself to the smallest horizontal stadium rect that can still"
+  },
+  {
+    "widget_name": "MaterialBanner",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design banner."
+  },
+  {
+    "widget_name": "BottomNavigationBar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A material widget that's displayed at the bottom of an app for selecting"
+  },
+  {
+    "widget_name": "_BottomNavigationTile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_Tile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_TileIcon",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_Label",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_Bar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "BottomNavigationBarTheme",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Applies a bottom navigation bar theme to descendant [BottomNavigationBar]"
+  },
+  {
+    "widget_name": "_DragHandle",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_BottomSheetLayoutWithSizeListener",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ModalBottomSheet",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_BottomSheetGestureDetector",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "RawMaterialButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Creates a button based on [Semantics], [Material], and [InkWell]"
+  },
+  {
+    "widget_name": "_InputPadding",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A widget to pad the area around a [MaterialButton]'s inner [Material]."
+  },
+  {
+    "widget_name": "ButtonBar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ButtonBarTheme",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Applies a button bar theme to descendant [ButtonBar] widgets."
+  },
+  {
+    "widget_name": "CalendarDatePicker",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays a grid of days for a given month and allows the user to select a"
+  },
+  {
+    "widget_name": "_DatePickerModeToggleButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A button that used to toggle the [DatePickerMode] for a date picker."
+  },
+  {
+    "widget_name": "_MonthPicker",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_FocusedDate",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "InheritedWidget indicating what the current focused date is for its children."
+  },
+  {
+    "widget_name": "_DayPicker",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays the days of a given month and allows choosing a day."
+  },
+  {
+    "widget_name": "_Day",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "YearPicker",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A scrollable grid of years to allow picking a year."
+  },
+  {
+    "widget_name": "CardTheme",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Defines default property values for descendant [Card] widgets."
+  },
+  {
+    "widget_name": "_SliverFixedExtentCarousel",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A sliver that displays its box children in a linear array with a fixed extent"
+  },
+  {
+    "widget_name": "_SliverWeightedCarousel",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A sliver that arranges its box children in a linear array, constraining them"
+  },
+  {
+    "widget_name": "CheckboxListTile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A [ListTile] with a [Checkbox]. In other words, a checkbox with a label."
+  },
+  {
+    "widget_name": "CheckboxTheme",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Applies a checkbox theme to descendant [Checkbox] widgets."
+  },
+  {
+    "widget_name": "RawChip",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A raw Material Design chip."
+  },
+  {
+    "widget_name": "_ChipRedirectingHitDetectionWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Redirects the `buttonRect.dy` passed to [RenderBox.hitTest] to the vertical"
+  },
+  {
+    "widget_name": "_ChipRenderWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_EnsureMinSemanticsSize",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ChoiceChip",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design choice chip."
+  },
+  {
+    "widget_name": "CircleAvatar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A circle that represents a user."
+  },
+  {
+    "widget_name": "DataTable",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A data table that follows the"
+  },
+  {
+    "widget_name": "_SortArrow",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_NullWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "DataTableTheme",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Applies a data table theme to descendant [DataTable] widgets."
+  },
+  {
+    "widget_name": "DatePickerDialog",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material-style date picker dialog."
+  },
+  {
+    "widget_name": "_DatePickerHeader",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Re-usable widget that displays the selected date (in large font) and the"
+  },
+  {
+    "widget_name": "DateRangePickerDialog",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material-style date range picker dialog."
+  },
+  {
+    "widget_name": "_CalendarRangePickerDialog",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CalendarDateRangePicker",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays a scrollable calendar grid that allows a user to select a range"
+  },
+  {
+    "widget_name": "_CalendarKeyboardNavigator",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_DayHeaders",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_MonthItem",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays the days of a given month and allows choosing a date range."
+  },
+  {
+    "widget_name": "_DayItem",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_InputDateRangePickerDialog",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_InputDateRangePicker",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Provides a pair of text fields that allow the user to enter the start and"
+  },
+  {
+    "widget_name": "_DesktopTextSelectionControlsToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "DesktopTextSelectionToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material-style desktop text selection toolbar."
+  },
+  {
+    "widget_name": "DesktopTextSelectionToolbarButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A [TextButton] for the Material desktop text selection toolbar."
+  },
+  {
+    "widget_name": "Dialog",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design dialog."
+  },
+  {
+    "widget_name": "SimpleDialogOption",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "An option used in a [SimpleDialog]."
+  },
+  {
+    "widget_name": "SimpleDialog",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A simple Material Design dialog."
+  },
+  {
+    "widget_name": "_FullWindowDialogWrapper",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_DialogPopScope",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_NavigatorShim",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "VerticalDivider",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A thin vertical line, with padding on either side."
+  },
+  {
+    "widget_name": "Drawer",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design panel that slides in horizontally from the edge of a"
+  },
+  {
+    "widget_name": "_DrawerControllerScope",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "DrawerController",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Provides interactive behavior for [Drawer] widgets."
+  },
+  {
+    "widget_name": "DrawerHeader",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "The top-most region of a Material Design drawer. The header's [child]"
+  },
+  {
+    "widget_name": "_DropdownMenuItemButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_DropdownMenu",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_DropdownRoutePage",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_MenuItem",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_DropdownMenuItemContainer",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "DropdownButtonHideUnderline",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "An inherited widget that causes any descendant [DropdownButton]"
+  },
+  {
+    "widget_name": "DropdownButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design button for selecting from a list of items."
+  },
+  {
+    "widget_name": "DropdownMenu",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A dropdown menu that can be opened from a [TextField]. The selected"
+  },
+  {
+    "widget_name": "_DropdownMenuBody",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ElevatedButtonWithIconChild",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ExpandIcon",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A widget representing a rotating expand/collapse button. The icon rotates"
+  },
+  {
+    "widget_name": "ExpansionPanelList",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A material expansion panel list that lays out its children and animates"
+  },
+  {
+    "widget_name": "ExpansionTile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A single-line [ListTile] with an expansion arrow icon that expands or collapses"
+  },
+  {
+    "widget_name": "_FilledButtonWithIconChild",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "FilterChip",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design filter chip."
+  },
+  {
+    "widget_name": "FlexibleSpaceBar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "The part of a Material Design [AppBar] that expands, collapses, and"
+  },
+  {
+    "widget_name": "FlexibleSpaceBarSettings",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Provides sizing and opacity information to a [FlexibleSpaceBar]."
+  },
+  {
+    "widget_name": "_FlexibleSpaceHeaderOpacity",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ChildOverflowBox",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "GridTile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A tile in a Material Design grid list."
+  },
+  {
+    "widget_name": "GridTileBar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A header used in a Material Design [GridTile]."
+  },
+  {
+    "widget_name": "_SelectableIconButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "Ink",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A convenience widget for drawing images and other decorations on [Material]"
+  },
+  {
+    "widget_name": "_ParentInkResponseProvider",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "InkResponse",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "An area of a [Material] that responds to touch. Has a configurable shape and"
+  },
+  {
+    "widget_name": "_InkResponseStateWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "InputChip",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design input chip."
+  },
+  {
+    "widget_name": "InputDatePickerFormField",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A [TextFormField] configured to accept and validate a date entered by a user."
+  },
+  {
+    "widget_name": "_BorderContainer",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_HelperError",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_Decorator",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AffixText",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "InputDecorator",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Defines the appearance of a Material Design text field."
+  },
+  {
+    "widget_name": "_ListTile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "TextMagnifier",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A [Magnifier] positioned by rules dictated by the native Android magnifier."
+  },
+  {
+    "widget_name": "Magnifier",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material-styled magnifying glass."
+  },
+  {
+    "widget_name": "Material",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A piece of material."
+  },
+  {
+    "widget_name": "_InkFeatures",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_MaterialInterior",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "The interior of non-transparent material."
+  },
+  {
+    "widget_name": "_ShapeBorderPaint",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "MaterialButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A utility class for building Material buttons that depend on the"
+  },
+  {
+    "widget_name": "_MenuAnchorScope",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "MenuBar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A menu bar that manages cascading child menus."
+  },
+  {
+    "widget_name": "MenuItemButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A button for use in a [MenuBar], in a menu created with [MenuAnchor], or on"
+  },
+  {
+    "widget_name": "CheckboxMenuButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A menu item that combines a [Checkbox] widget with a [MenuItemButton]."
+  },
+  {
+    "widget_name": "RadioMenuButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A menu item that combines a [Radio] widget with a [MenuItemButton]."
+  },
+  {
+    "widget_name": "SubmenuButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A menu button that displays a cascading menu."
+  },
+  {
+    "widget_name": "MenuAcceleratorCallbackBinding",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "An [InheritedWidget] that provides a descendant [MenuAcceleratorLabel] with"
+  },
+  {
+    "widget_name": "MenuAcceleratorLabel",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A widget that draws the label text for a menu item (typically a"
+  },
+  {
+    "widget_name": "_MenuItemLabel",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A label widget that is used as the label for a [MenuItemButton] or"
+  },
+  {
+    "widget_name": "_MenuPanel",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A widget that manages a list of menu buttons in a menu."
+  },
+  {
+    "widget_name": "_Submenu",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "MergeableMaterial",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays a list of [MergeableMaterialItem] children. The list contains"
+  },
+  {
+    "widget_name": "NavigationDestination",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material 3 [NavigationBar] destination."
+  },
+  {
+    "widget_name": "_NavigationDestinationBuilder",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Widget that handles the semantics and layout of a navigation bar"
+  },
+  {
+    "widget_name": "_NavigationDestinationInfo",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Inherited widget for passing data from the [NavigationBar] to the"
+  },
+  {
+    "widget_name": "NavigationIndicator",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Selection Indicator for the Material 3 [NavigationBar] and [NavigationRail]"
+  },
+  {
+    "widget_name": "_NavigationBarDestinationLayout",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Widget that handles the layout of the icon + label in a navigation bar"
+  },
+  {
+    "widget_name": "_DestinationLayoutAnimationBuilder",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Determines the appropriate [Curve] and [Animation] to use for laying out the"
+  },
+  {
+    "widget_name": "_NavigationBarDestinationSemantics",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Semantics widget for a navigation bar destination."
+  },
+  {
+    "widget_name": "_NavigationBarDestinationTooltip",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Tooltip widget for use in a [NavigationBar]."
+  },
+  {
+    "widget_name": "_StatusTransitionWidgetBuilder",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Widget that listens to an animation, and rebuilds when the animation changes"
+  },
+  {
+    "widget_name": "_SelectableAnimatedBuilder",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_CurvedAnimationBuilder",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Watches [animation] and calls [builder] with the appropriate [Curve]"
+  },
+  {
+    "widget_name": "NavigationDrawerDestination",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design [NavigationDrawer] destination."
+  },
+  {
+    "widget_name": "_NavigationDestinationSemantics",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Semantics widget for a navigation drawer destination."
+  },
+  {
+    "widget_name": "_NavigationDrawerDestinationInfo",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Inherited widget for passing data from the [NavigationDrawer] to the"
+  },
+  {
+    "widget_name": "_RailDestination",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AddIndicator",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "When [addIndicator] is `true`, puts [child] center aligned in a [Stack] with"
+  },
+  {
+    "widget_name": "_ExtendedNavigationRailAnimation",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_OutlinedButtonWithIconChild",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ZoomPageTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ZoomEnterTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ZoomExitTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_FadeForwardsPageTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_PageTransitionsThemeTransitions",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ZoomPageTransitionNoCache",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ZoomEnterTransitionNoCache",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ZoomExitTransitionNoCache",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "PaginatedDataTable",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A table that follows the"
+  },
+  {
+    "widget_name": "_PopupMenu",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "PopupMenuButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays a menu when pressed and calls [onSelected] when the menu is dismissed"
+  },
+  {
+    "widget_name": "_PredictiveBackGestureDetector",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_PredictiveBackSharedElementPageTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Android's predictive back page shared element transition."
+  },
+  {
+    "widget_name": "_PredictiveBackFullscreenPageTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Android's predictive back page transition for full screen surfaces."
+  },
+  {
+    "widget_name": "RadioListTile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A [ListTile] with a [Radio]. In other words, a radio button with a label."
+  },
+  {
+    "widget_name": "RadioTheme",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Applies a radio theme to descendant [Radio] widgets."
+  },
+  {
+    "widget_name": "RangeSlider",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design range slider."
+  },
+  {
+    "widget_name": "_RangeSliderRenderObjectWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ValueIndicatorRenderObjectWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ScaffoldMessenger",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Manages [SnackBar]s and [MaterialBanner]s for descendant [Scaffold]s."
+  },
+  {
+    "widget_name": "_ScaffoldMessengerScope",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_BodyBuilder",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_FloatingActionButtonTransition",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Handler for scale and rotation animations in the [FloatingActionButton]."
+  },
+  {
+    "widget_name": "_StandardBottomSheet",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ScaffoldScope",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SearchPage",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SearchAnchor",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Manages a \"search view\" route that allows the user to select one of the"
+  },
+  {
+    "widget_name": "_ViewContent",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SearchBar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design search bar."
+  },
+  {
+    "widget_name": "SearchBarTheme",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Applies a search bar theme to descendant [SearchBar] widgets."
+  },
+  {
+    "widget_name": "_SegmentedButtonRenderWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SelectableText",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A run of selectable text with a single style."
+  },
+  {
+    "widget_name": "SelectionArea",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A widget that introduces an area for user selections with adaptive selection"
+  },
+  {
+    "widget_name": "_SliderRenderObjectWidget",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SnackBarAction",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A button for a [SnackBar], known as an \"action\"."
+  },
+  {
+    "widget_name": "SpellCheckSuggestionsToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "The default spell check suggestions toolbar for Android."
+  },
+  {
+    "widget_name": "_SpellCheckSuggestionsToolbarContainer",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "The Material-styled toolbar outline for the spell check suggestions"
+  },
+  {
+    "widget_name": "Stepper",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A material stepper widget that displays progress through a sequence of"
+  },
+  {
+    "widget_name": "_MaterialSwitch",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SwitchListTile",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A [ListTile] with a [Switch]. In other words, a switch with a label."
+  },
+  {
+    "widget_name": "SwitchTheme",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Applies a switch theme to descendant [Switch] widgets."
+  },
+  {
+    "widget_name": "Tab",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design [TabBar] tab."
+  },
+  {
+    "widget_name": "_TabStyle",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "TabBarView",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A page view that displays the widget which corresponds to the currently"
+  },
+  {
+    "widget_name": "TabPageSelectorIndicator",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays a single circle with the specified size, border style, border color"
+  },
+  {
+    "widget_name": "TabPageSelector",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Uses [TabPageSelectorIndicator] to display a row of small circular"
+  },
+  {
+    "widget_name": "_TabControllerScope",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "DefaultTabController",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "The [TabController] for descendant widgets that don't specify one"
+  },
+  {
+    "widget_name": "_TextButtonWithIconChild",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_TextSelectionControlsToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "TextSelectionToolbar",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A fully-functional Material-style text selection toolbar."
+  },
+  {
+    "widget_name": "_TextSelectionToolbarOverflowable",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_TextSelectionToolbarTrailingEdgeAlign",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_TextSelectionToolbarItemsLayout",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_TextSelectionToolbarContainer",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_TextSelectionToolbarOverflowButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "TextSelectionToolbarTextButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A button styled like a Material native Android text selection menu button."
+  },
+  {
+    "widget_name": "AnimatedTheme",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Animated version of [Theme] which automatically transitions the colors,"
+  },
+  {
+    "widget_name": "_DialTimePickerHeader",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "The header for the time picker in dial mode."
+  },
+  {
+    "widget_name": "_DialTimeSelectorControl",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "The control label for the time selector in dial mode."
+  },
+  {
+    "widget_name": "_DialHourControl",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays the hour fragment in dial mode."
+  },
+  {
+    "widget_name": "_TimeSelectorSeparator",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A passive fragment showing a string value."
+  },
+  {
+    "widget_name": "_DialMinuteControl",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays the minute fragment in dial mode."
+  },
+  {
+    "widget_name": "_DayPeriodControl",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Displays the am/pm fragment and provides controls for switching between am"
+  },
+  {
+    "widget_name": "_AmPmButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_DayPeriodInputPadding",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A widget to pad the area around the [_DayPeriodControl]'s inner [Material]."
+  },
+  {
+    "widget_name": "_Dial",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_TimePickerInput",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_HourTextField",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_MinuteTextField",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_HourMinuteTextField",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "TimePickerDialog",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design time picker designed to appear inside a popup dialog."
+  },
+  {
+    "widget_name": "_TimePicker",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Time Picker widget that can be embedded into another widget."
+  },
+  {
+    "widget_name": "ToggleButtons",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A set of toggle buttons."
+  },
+  {
+    "widget_name": "_SelectToggleButton",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "Tooltip",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design tooltip."
+  },
+  {
+    "widget_name": "_TooltipBox",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_TooltipVisibilityScope",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "TooltipVisibility",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "Overrides the visibility of descendant [Tooltip] widgets."
+  },
+  {
+    "widget_name": "_AccountPictures",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AccountDetails",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "UserAccountsDrawerHeader",
+    "top_level": "Design Systems",
+    "sub_category": "Material Components",
+    "summary": "A Material Design [Drawer] header that identifies the app's user."
+  },
+  {
+    "widget_name": "ActionListener",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A helper widget for making sure that listeners on an action are removed properly."
+  },
+  {
+    "widget_name": "Actions",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that maps [Intent]s to [Action]s to be used by its descendants"
+  },
+  {
+    "widget_name": "_ActionsScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "FocusableActionDetector",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that combines the functionality of [Actions], [Shortcuts],"
+  },
+  {
+    "widget_name": "RenderObjectToWidgetAdapter",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A bridge from a [RenderObject] to an [Element] tree."
+  },
+  {
+    "widget_name": "_AnimatedSize",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "AnimatedSwitcher",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that by default does a cross-fade between a new widget and the"
+  },
+  {
+    "widget_name": "AnnotatedRegion",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Annotates a region of the layer tree with a value."
+  },
+  {
+    "widget_name": "WidgetsApp",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A convenience widget that wraps a number of widgets that are commonly"
+  },
+  {
+    "widget_name": "RawAutocomplete",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget for helping the user make a selection by entering some text and"
+  },
+  {
+    "widget_name": "AutofillGroup",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "An [AutofillScope] widget that groups [AutofillClient]s together."
+  },
+  {
+    "widget_name": "_AutofillScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "AutomaticKeepAlive",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Allows subtrees to request to be kept alive in lazy lists."
+  },
+  {
+    "widget_name": "Banner",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Displays a diagonal message above the corner of another widget."
+  },
+  {
+    "widget_name": "CheckedModeBanner",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Displays a [Banner] saying \"DEBUG\" when running in debug mode."
+  },
+  {
+    "widget_name": "Directionality",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that determines the ambient directionality of text and"
+  },
+  {
+    "widget_name": "ShaderMask",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that applies a mask generated by a [Shader] to its child."
+  },
+  {
+    "widget_name": "BackdropGroup",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that establishes a shared backdrop layer for all child [BackdropFilter]"
+  },
+  {
+    "widget_name": "ClipRRect",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that clips its child using a rounded rectangle."
+  },
+  {
+    "widget_name": "ClipRSuperellipse",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that clips its child using a rounded superellipse."
+  },
+  {
+    "widget_name": "PhysicalModel",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget representing a physical layer that clips its children to a shape."
+  },
+  {
+    "widget_name": "PhysicalShape",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget representing a physical layer that clips its children to a path."
+  },
+  {
+    "widget_name": "CompositedTransformTarget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that can be targeted by a [CompositedTransformFollower]."
+  },
+  {
+    "widget_name": "CompositedTransformFollower",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that follows a [CompositedTransformTarget]."
+  },
+  {
+    "widget_name": "LayoutId",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Metadata for identifying children in a [CustomMultiChildLayout]."
+  },
+  {
+    "widget_name": "ConstraintsTransformBox",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A container widget that applies an arbitrary transform to its constraints,"
+  },
+  {
+    "widget_name": "UnconstrainedBox",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that imposes no constraints on its child, allowing it to render"
+  },
+  {
+    "widget_name": "IgnoreBaseline",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that causes the parent to ignore the [child] for the purposes"
+  },
+  {
+    "widget_name": "Positioned",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that controls where a child of a [Stack] is positioned."
+  },
+  {
+    "widget_name": "PositionedDirectional",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that controls where a child of a [Stack] is positioned without"
+  },
+  {
+    "widget_name": "Flex",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that displays its children in a one-dimensional array."
+  },
+  {
+    "widget_name": "Flexible",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that controls how a child of a [Row], [Column], or [Flex] flexes."
+  },
+  {
+    "widget_name": "DefaultAssetBundle",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that determines the default asset bundle for its descendants."
+  },
+  {
+    "widget_name": "WidgetToRenderBoxAdapter",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "An adapter for placing a specific [RenderBox] in the widget tree."
+  },
+  {
+    "widget_name": "Listener",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that calls callbacks in response to common pointer events."
+  },
+  {
+    "widget_name": "MouseRegion",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that tracks the movement of mice."
+  },
+  {
+    "widget_name": "RepaintBoundary",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that creates a separate display list for its child."
+  },
+  {
+    "widget_name": "MetaData",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Holds opaque meta data in the render tree."
+  },
+  {
+    "widget_name": "BlockSemantics",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that drops the semantics of all widget that were painted before it"
+  },
+  {
+    "widget_name": "IndexedSemantics",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that annotates the child semantics with an index."
+  },
+  {
+    "widget_name": "KeyedSubtree",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that builds its child."
+  },
+  {
+    "widget_name": "Builder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A stateless utility widget whose [build] method uses its"
+  },
+  {
+    "widget_name": "StatefulBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A platonic widget that both has state and calls a closure to obtain its child widget."
+  },
+  {
+    "widget_name": "ColoredBox",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that paints its area with a specified [Color] and then draws its"
+  },
+  {
+    "widget_name": "RootWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget for the root of the widget tree."
+  },
+  {
+    "widget_name": "ColorFiltered",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Applies a [ColorFilter] to its child."
+  },
+  {
+    "widget_name": "DecoratedSliver",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver widget that paints a [Decoration] either before or after its child"
+  },
+  {
+    "widget_name": "DefaultTextEditingShortcuts",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget with the shortcuts used for the default text editing behavior."
+  },
+  {
+    "widget_name": "DisplayFeatureSubScreen",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Positions [child] such that it avoids overlapping any [DisplayFeature] that"
+  },
+  {
+    "widget_name": "DraggableScrollableActuator",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that can notify a descendent [DraggableScrollableSheet] that it"
+  },
+  {
+    "widget_name": "DragBoundary",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Provides a [DragBoundaryDelegate] for its descendants whose bounds are those defined by this widget."
+  },
+  {
+    "widget_name": "DualTransitionBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A transition builder that animates its [child] based on the"
+  },
+  {
+    "widget_name": "_CompositionCallback",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "EditableText",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A basic text input field."
+  },
+  {
+    "widget_name": "_Editable",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ScribbleFocusable",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "Expansible",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A [StatefulWidget] that expands and collapses."
+  },
+  {
+    "widget_name": "FadeInImage",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "An image that shows a [placeholder] image while the target [image] is"
+  },
+  {
+    "widget_name": "_AnimatedFadeOutFadeIn",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "Focus",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that manages a [FocusNode] to allow keyboard focus to be given"
+  },
+  {
+    "widget_name": "ExcludeFocus",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that controls whether or not the descendants of this widget are"
+  },
+  {
+    "widget_name": "FocusTraversalOrder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "An inherited widget that describes the order in which its child subtree"
+  },
+  {
+    "widget_name": "FocusTraversalGroup",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that describes the inherited focus policy for focus traversal for"
+  },
+  {
+    "widget_name": "ExcludeFocusTraversal",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that controls whether or not the descendants of this widget are"
+  },
+  {
+    "widget_name": "_FormScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ErrorWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that renders an exception's message."
+  },
+  {
+    "widget_name": "RawGestureDetector",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that detects gestures described by the given gesture"
+  },
+  {
+    "widget_name": "_GestureSemantics",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "GridPaper",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that draws a rectilinear grid of lines one pixel wide."
+  },
+  {
+    "widget_name": "HeroMode",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Enables or disables [Hero]es in the widget subtree."
+  },
+  {
+    "widget_name": "ImageFiltered",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Applies an [ImageFilter] to its child."
+  },
+  {
+    "widget_name": "ImageIcon",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "An icon that comes from an [ImageProvider], e.g. an [AssetImage]."
+  },
+  {
+    "widget_name": "AnimatedPadding",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Animated version of [Padding] which automatically transitions the"
+  },
+  {
+    "widget_name": "AnimatedPositionedDirectional",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Animated version of [PositionedDirectional] which automatically transitions"
+  },
+  {
+    "widget_name": "AnimatedRotation",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Animated version of [Transform.rotate] which automatically transitions the child's"
+  },
+  {
+    "widget_name": "AnimatedSlide",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Widget which automatically transitions the child's"
+  },
+  {
+    "widget_name": "SliverAnimatedOpacity",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Animated version of [SliverOpacity] which automatically transitions the"
+  },
+  {
+    "widget_name": "AnimatedFractionallySizedBox",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Animated version of [FractionallySizedBox] which automatically transitions the"
+  },
+  {
+    "widget_name": "_CaptureAll",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_InteractiveViewerBuilt",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ListWheelScrollView",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A box in which children on a wheel can be scrolled."
+  },
+  {
+    "widget_name": "ListWheelViewport",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A viewport showing a subset of children on a wheel."
+  },
+  {
+    "widget_name": "_LocalizationsScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "Localizations",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Defines the [Locale] for its `child` and the localized resources that the"
+  },
+  {
+    "widget_name": "LookupBoundary",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A lookup boundary controls what entities are visible to descendants of the"
+  },
+  {
+    "widget_name": "RawMagnifier",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A common base class for magnifiers."
+  },
+  {
+    "widget_name": "_Magnifier",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_MediaQueryFromView",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SemanticsClipper",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that modifies the size of the [SemanticsNode.rect] created by its"
+  },
+  {
+    "widget_name": "ModalBarrier",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that prevents the user from interacting with widgets behind itself."
+  },
+  {
+    "widget_name": "_ModalBarrierGestureDetector",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "NavigationToolbar",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "[NavigationToolbar] is a layout helper to position 3 widgets or groups of"
+  },
+  {
+    "widget_name": "HeroControllerScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "An inherited widget to host a hero controller."
+  },
+  {
+    "widget_name": "NavigatorPopHandler",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Enables the handling of system back gestures."
+  },
+  {
+    "widget_name": "_InheritedNestedScrollView",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SliverOverlapAbsorber",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that wraps another, forcing its layout extent to be treated as"
+  },
+  {
+    "widget_name": "SliverOverlapInjector",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that has a sliver geometry based on the values stored in a"
+  },
+  {
+    "widget_name": "OrientationBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Builds a widget tree that can depend on the parent widget's orientation"
+  },
+  {
+    "widget_name": "DeviceOrientationBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Builds a widget tree that can depend on the device's orientation."
+  },
+  {
+    "widget_name": "_OverlayEntryWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "Overlay",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A stack of entries that can be managed independently."
+  },
+  {
+    "widget_name": "_WrappingOverlay",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_Theater",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Special version of a [Stack], that doesn't layout and render the first"
+  },
+  {
+    "widget_name": "OverlayPortal",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that renders its overlay child on an [Overlay]."
+  },
+  {
+    "widget_name": "_RenderTheaterMarker",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_OverlayPortal",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_DeferredLayout",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "GlowingOverscrollIndicator",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A visual indication that a scroll view has overscrolled."
+  },
+  {
+    "widget_name": "StretchingOverscrollIndicator",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A Material Design visual indication that a scroll view has overscrolled."
+  },
+  {
+    "widget_name": "PageStorage",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Establish a subtree in which widgets can opt into persisting states after"
+  },
+  {
+    "widget_name": "_FadeUpwardsPageTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_OpenUpwardsPageTransition",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "PerformanceOverlay",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Displays performance statistics."
+  },
+  {
+    "widget_name": "PinnedHeaderSliver",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that keeps its Widget child at the top of the a [CustomScrollView]."
+  },
+  {
+    "widget_name": "_PinnedHeaderSliver",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "PlatformMenuBar",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A menu bar that uses the platform's native APIs to construct and render a"
+  },
+  {
+    "widget_name": "AndroidView",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Embeds an Android view in the Widget hierarchy."
+  },
+  {
+    "widget_name": "HtmlElementView",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Embeds an HTML element in the Widget hierarchy in Flutter web."
+  },
+  {
+    "widget_name": "_AndroidPlatformView",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "PlatformViewLink",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Links a platform view with the Flutter framework."
+  },
+  {
+    "widget_name": "PlatformViewSurface",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "AndroidViewSurface",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Integrates an Android view with Flutter's compositor, touch, and semantics subsystems."
+  },
+  {
+    "widget_name": "_PlatformViewPlaceHolder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "When a platform view is in the widget hierarchy, this widget is used to capture"
+  },
+  {
+    "widget_name": "PopScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Manages back navigation gestures."
+  },
+  {
+    "widget_name": "PreferredSize",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget with a preferred size."
+  },
+  {
+    "widget_name": "PrimaryScrollController",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Associates a [ScrollController] with a subtree."
+  },
+  {
+    "widget_name": "RadioGroup",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A group for radios."
+  },
+  {
+    "widget_name": "_RadioGroupStateScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "RawKeyboardListener",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_MenuControllerScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "RawMenuAnchor",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that wraps a child and anchors a floating menu."
+  },
+  {
+    "widget_name": "RawMenuAnchorGroup",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Creates a menu anchor that is always visible and is not displayed in an"
+  },
+  {
+    "widget_name": "RawRadio",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A Radio button that provides basic radio functionalities."
+  },
+  {
+    "widget_name": "RawTooltip",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that wraps a child to display an informative overlay in response to"
+  },
+  {
+    "widget_name": "ReorderableList",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A scrolling container that allows the user to interactively reorder the"
+  },
+  {
+    "widget_name": "SliverReorderableList",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver list that allows the user to interactively reorder the list items."
+  },
+  {
+    "widget_name": "_ReorderableItem",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ReorderableDragStartListener",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A wrapper widget that will recognize the start of a drag on the wrapped"
+  },
+  {
+    "widget_name": "_DragItemProxy",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "RestorationScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Creates a new scope for restoration IDs used by descendant widgets to claim"
+  },
+  {
+    "widget_name": "UnmanagedRestorationScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Inserts a provided [RestorationBucket] into the widget tree and makes it"
+  },
+  {
+    "widget_name": "RootRestorationScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Inserts a child bucket of [RestorationManager.rootBucket] into the widget"
+  },
+  {
+    "widget_name": "Router",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "The dispatcher for opening and closing pages of an application."
+  },
+  {
+    "widget_name": "_RouterScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "BackButtonListener",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A convenience widget that registers a callback for when the back button is pressed."
+  },
+  {
+    "widget_name": "_ModalScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SafeArea",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that insets its child with sufficient padding to avoid intrusions"
+  },
+  {
+    "widget_name": "SliverSafeArea",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that insets another sliver by sufficient padding to avoid"
+  },
+  {
+    "widget_name": "_ScrollableScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ScrollableSelectionHandler",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget to handle selection for a scrollable."
+  },
+  {
+    "widget_name": "_ScrollSemantics",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "With [_ScrollSemantics] certain child [SemanticsNode]s can be"
+  },
+  {
+    "widget_name": "TwoDimensionalScrollable",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that manages scrolling in both the vertical and horizontal"
+  },
+  {
+    "widget_name": "_TwoDimensionalScrollableScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "RawScrollbar",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "An extendable base class for building scrollbars that fade in and out."
+  },
+  {
+    "widget_name": "_SelectionKeepAlive",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_ScrollNotificationObserverScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ScrollNotificationObserver",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Notifies its listeners when a descendant scrolls."
+  },
+  {
+    "widget_name": "SelectableRegion",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that introduces an area for user selections."
+  },
+  {
+    "widget_name": "SelectionListener",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A [SelectionContainer] that allows the user to access the [SelectionDetails] and"
+  },
+  {
+    "widget_name": "SelectionContainer",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A container that handles [SelectionEvent]s for the [Selectable]s in"
+  },
+  {
+    "widget_name": "SelectionRegistrarScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "An inherited widget to host a [SelectionRegistrar] for the subtree."
+  },
+  {
+    "widget_name": "SemanticsDebugger",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that visualizes the semantics for the child."
+  },
+  {
+    "widget_name": "_IgnorePointerWithSemantics",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget ignores pointer event but still keeps semantics actions."
+  },
+  {
+    "widget_name": "SensitiveContent",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SharedAppData",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Enables sharing key/value data with its `child` and all of the"
+  },
+  {
+    "widget_name": "Shortcuts",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that creates key bindings to specific actions for its"
+  },
+  {
+    "widget_name": "CallbackShortcuts",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that binds key combinations to specific callbacks."
+  },
+  {
+    "widget_name": "ShortcutRegistrar",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that holds a [ShortcutRegistry] which allows descendants to add,"
+  },
+  {
+    "widget_name": "_ShortcutRegistrarScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SingleChildViewport",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SizeChangedLayoutNotifier",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that automatically dispatches a [SizeChangedLayoutNotification]"
+  },
+  {
+    "widget_name": "SliverVariedExtentList",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that places its box children in a linear array and constrains them"
+  },
+  {
+    "widget_name": "SliverOpacity",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver widget that makes its sliver child partially transparent."
+  },
+  {
+    "widget_name": "SliverIgnorePointer",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver widget that is invisible during hit testing."
+  },
+  {
+    "widget_name": "SliverOffstage",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that lays its sliver child out as if it was in the tree, but"
+  },
+  {
+    "widget_name": "KeepAlive",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Mark a child as needing to stay alive even when it's in a lazy list that"
+  },
+  {
+    "widget_name": "SliverConstrainedCrossAxis",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that constrains the cross axis extent of its sliver child."
+  },
+  {
+    "widget_name": "_SliverZeroFlexParentDataWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverConstrainedCrossAxis",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SliverCrossAxisExpanded",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Set a flex factor for allocating space in the cross axis direction."
+  },
+  {
+    "widget_name": "SliverCrossAxisGroup",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that places multiple sliver children in a linear array along"
+  },
+  {
+    "widget_name": "SliverMainAxisGroup",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that places multiple sliver children in a linear array along"
+  },
+  {
+    "widget_name": "SliverEnsureSemantics",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SliverFillViewport",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that contains multiple box children that each fills the viewport."
+  },
+  {
+    "widget_name": "_SliverFillViewportRenderObjectWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverFractionalPadding",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverFillRemainingWithScrollable",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverFillRemainingWithoutScrollable",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverFillRemainingAndOverscroll",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SliverFloatingHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that shows its [child] when the user scrolls forward and hides it"
+  },
+  {
+    "widget_name": "_SnapTrigger",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverFloatingHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_FloatingHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverScrollingPersistentHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverPinnedPersistentHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverFloatingPersistentHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverFloatingPinnedPersistentHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SliverPrototypeExtentList",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that places its box children in a linear array and constrains them"
+  },
+  {
+    "widget_name": "SliverResizingHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A sliver that is pinned to the start of its [CustomScrollView] and"
+  },
+  {
+    "widget_name": "_SliverResizingHeader",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "TreeSliver",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that displays [TreeSliverNode]s that expand and collapse in a"
+  },
+  {
+    "widget_name": "_TreeNodeParentDataWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "SnapshotWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that can replace its child with a snapshotted version of the child."
+  },
+  {
+    "widget_name": "Spacer",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Spacer creates an adjustable, empty spacer that can be used to tune the"
+  },
+  {
+    "widget_name": "StretchEffect",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that applies a stretching visual effect to its child."
+  },
+  {
+    "widget_name": "_StretchOverscrollEffect",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that replicates the native Android stretch overscroll effect."
+  },
+  {
+    "widget_name": "SystemContextMenu",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Displays the system context menu on top of the Flutter view."
+  },
+  {
+    "widget_name": "TableCell",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that controls how a child of a [Table] is aligned."
+  },
+  {
+    "widget_name": "_TableCell",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "TapRegionSurface",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that provides notification of a tap inside or outside of a set of"
+  },
+  {
+    "widget_name": "TapRegion",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that defines a region that can detect taps inside or outside of"
+  },
+  {
+    "widget_name": "_SelectableTextContainer",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_RichText",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "Texture",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A rectangle upon which a backend texture is mapped."
+  },
+  {
+    "widget_name": "_SelectionToolbarWrapper",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SelectionHandleOverlay",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "This widget represents a single draggable selection handle."
+  },
+  {
+    "widget_name": "TextSelectionGestureDetector",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A gesture detector to respond to non-exclusive event chains for a text field."
+  },
+  {
+    "widget_name": "TickerMode",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Enables or disables tickers (and thus animation controllers) in the widget"
+  },
+  {
+    "widget_name": "_EffectiveTickerMode",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "Title",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that describes this app in the operating system."
+  },
+  {
+    "widget_name": "ListenableBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A general-purpose widget for building a widget subtree when a [Listenable]"
+  },
+  {
+    "widget_name": "TweenAnimationBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "[Widget] builder that animates a property of a [Widget] to a target value"
+  },
+  {
+    "widget_name": "UndoHistory",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Provides undo/redo capabilities for a [ValueNotifier]."
+  },
+  {
+    "widget_name": "ValueListenableBuilder",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget whose content stays synced with a [ValueListenable]."
+  },
+  {
+    "widget_name": "View",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Bootstraps a render tree that is rendered into the provided [FlutterView]."
+  },
+  {
+    "widget_name": "RawView",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "The lower level workhorse widget for [View] that bootstraps a render tree"
+  },
+  {
+    "widget_name": "_RawViewInternal",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "The workhorse behind the [RawView] widget that actually bootstraps a render"
+  },
+  {
+    "widget_name": "_ViewScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_PipelineOwnerScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_MultiChildComponentWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "ViewCollection",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A collection of sibling [View]s."
+  },
+  {
+    "widget_name": "ViewAnchor",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Decorates a [child] widget with a side [View]."
+  },
+  {
+    "widget_name": "Viewport",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget through which a portion of larger content can be viewed, typically"
+  },
+  {
+    "widget_name": "ShrinkWrappingViewport",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that is bigger on the inside and shrink wraps its children in the"
+  },
+  {
+    "widget_name": "Visibility",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Whether to show or hide a child."
+  },
+  {
+    "widget_name": "_VisibilityScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Inherited widget that allows descendants to find their visibility status."
+  },
+  {
+    "widget_name": "SliverVisibility",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Whether to show or hide a sliver child."
+  },
+  {
+    "widget_name": "_Visibility",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_SliverVisibility",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_WidgetForTypeTests",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "WidgetInspector",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that enables inspecting the child widget's structure."
+  },
+  {
+    "widget_name": "EnableWidgetInspectorScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Enables the Flutter DevTools Widget Inspector for a [Widget] subtree."
+  },
+  {
+    "widget_name": "DisableWidgetInspectorScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Disables the Flutter DevTools Widget Inspector for a [Widget] subtree."
+  },
+  {
+    "widget_name": "_InspectorOverlay",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_WidgetInspectorButtonGroup",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_WidgetInspectorButton",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_WidgetSpanParentData",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "_AutoScaleInlineWidget",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "WillPopScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "PlatformSelectableRegionContextMenu",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A widget that provides native selection context menu for its child subtree."
+  },
+  {
+    "widget_name": "RawWebImage",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "A [Widget] that displays an image that is backed by an HTML element."
+  },
+  {
+    "widget_name": "ImgElementPlatformView",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Displays an `<img>` element with `src` set to [src]."
+  },
+  {
+    "widget_name": "RegularWindow",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "The [RegularWindow] widget provides a way to render a regular window in the"
+  },
+  {
+    "widget_name": "DialogWindow",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "The [DialogWindow] widget provides a way to render a dialog window in the"
+  },
+  {
+    "widget_name": "TooltipWindow",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "PopupWindow",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "The [PopupWindow] widget provides a way to render a popup window in the"
+  },
+  {
+    "widget_name": "SatelliteWindow",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "The [SatelliteWindow] widget provides a way to render a satellite window in the"
+  },
+  {
+    "widget_name": "_WindowRegistryScope",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "No summary available."
+  },
+  {
+    "widget_name": "WindowManager",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "The window manager provides a convenient way to render windows"
+  },
+  {
+    "widget_name": "_GtkContainer",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Wraps GtkContainer."
+  },
+  {
+    "widget_name": "_FlView",
+    "top_level": "Base Widgets",
+    "sub_category": "Miscellaneous",
+    "summary": "Wraps FlView."
+  }
+]
