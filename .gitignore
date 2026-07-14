@@ -103,4 +103,4 @@ criterion/
 # Local override / scratch config some contributors may use
 # ---------------------------------------------------------
 .cargo/config.local.toml
-tool/catalog_extractor/widgets_data.json
+tool/catalog_extractor/outputs/**

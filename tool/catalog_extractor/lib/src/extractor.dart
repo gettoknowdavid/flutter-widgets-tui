@@ -20,11 +20,26 @@ import 'widget_filter.dart';
 /// `bin/catalog_extractor.dart` (the one that regex-scraped
 /// docs.flutter.dev *and* regex-scanned SDK source in the same script).
 /// Every one of that script's responsibilities has moved to its own file;
-/// this class's only job is sequencing them correctly — in particular,
-/// running extraction in two passes, because [parseDoc]'s "See also:"
-/// related-widget guess needs the *complete* set of widget names before it
-/// can decide whether `[GridView]` in some other widget's doc comment is
-/// worth trusting as a real cross-reference.
+/// this class's only job is sequencing them correctly.
+///
+/// Sequencing here is deliberately **single-pass per barrel file**:
+/// classification + full member/doc extraction for a barrel's exports
+/// happens immediately, in [AnalyzerSession.forEachBarrelFile]'s callback,
+/// rather than in a separate pass over elements gathered from every
+/// barrel up front. See `analyzer_session.dart`'s doc comment for why
+/// that matters — it's not just a style choice, it's what fixed widgets
+/// like `CupertinoAdaptiveTextSelectionToolbar` silently vanishing from
+/// the catalog despite being an unambiguous, unambiguously-exported
+/// `Widget` subclass.
+///
+/// The one thing that genuinely can't happen until every barrel has been
+/// visited is [ParsedDoc.seeAlsoCandidates] resolution into a real
+/// `related_widget_name` (`[GridView]` in some other widget's doc comment
+/// is only worth trusting as a cross-reference once `GridView` is known
+/// to be something this run actually catalogued) — that's the one
+/// intentional second pass left, and it's pure in-memory data lookup
+/// against already-extracted [WidgetRecord]s, not a second round of
+/// analyzer element access.
 class CatalogExtractor {
   final AnalyzerSession session;
 
@@ -44,96 +59,129 @@ class CatalogExtractor {
 
   Future<CatalogOutput> run() async {
     onProgress?.call('🔍 Resolving public export namespace...');
-    final namespace = await session.resolvePublicExportNamespace(
-      onProgress: onProgress,
-    );
 
-    // --- Pass 1: classify + collect names -----------------------------
-    // Cheap, no doc parsing or member extraction yet — just enough to
-    // build the `knownWidgetNames` set that pass 2's parseDoc() calls
-    // need for related-widget guessing.
-    final widgetElements = <ClassElement>[];
-    final enumElements = <EnumElement>[];
+    // First barrel (in sorted, deterministic order — see
+    // AnalyzerSession.discoverBarrelFiles) to define a given name wins,
+    // same cross-barrel dedup rule as before, just tracked here now that
+    // resolution and extraction happen in the same pass instead of two.
+    final processedNames = <String>{};
 
-    for (final element in namespace.values) {
-      if (element is ClassElement && isWidgetElement(element)) {
-        widgetElements.add(element);
-      } else if (element is EnumElement) {
-        enumElements.add(element);
-      }
-      // Anything else (mixins, extensions, top-level functions, non-widget
-      // classes) is intentionally out of scope for a *widget* catalog —
-      // the original widgets_extractor.dart dumped all of these, but
-      // nothing downstream (model.dart, the Rust schema) consumes them.
-    }
-
-    // Sorted for deterministic output — same rationale as
-    // AnalyzerSession.discoverBarrelFiles: a seed artifact must not
-    // reorder itself between runs/machines just because
-    // `Map.values` iteration order isn't guaranteed.
-    widgetElements.sort((a, b) => (a.name ?? '').compareTo(b.name ?? ''));
-    enumElements.sort((a, b) => (a.name ?? '').compareTo(b.name ?? ''));
-
-    final knownWidgetNames = widgetElements
-        .map((e) => e.name)
-        .whereType<String>()
-        .toSet();
-
-    onProgress?.call(
-      '📦 Classified ${widgetElements.length} widgets and '
-      '${enumElements.length} enums.',
-    );
-
-    // --- Pass 2: full extraction ----------------------------------------
+    final preliminary = <_PreliminaryWidget>[];
+    final enumRecords = <EnumRecord>[];
     var uncategorizedCount = 0;
     var deprecatedCount = 0;
+    final extractionFailures = <String>[];
 
-    final widgetRecords = <WidgetRecord>[];
-    for (final element in widgetElements) {
-      final categorization = categorize(element);
-      if (categorization.isUncategorized) uncategorizedCount++;
+    await session.forEachBarrelFile((fileName, namespace) async {
+      for (final entry in namespace.definedNames2.entries) {
+        final element = entry.value;
+        final name = element.name;
+        if (name == null || name.startsWith('_')) continue;
+        if (!session.belongsToFlutterPackage(element)) continue;
+        if (!processedNames.add(name)) continue;
 
-      final doc = parseDoc(
-        element.documentationComment ?? '',
-        knownWidgetNames: knownWidgetNames,
-        flutterSrcRoot: flutterSrcRoot,
+        try {
+          if (element is ClassElement && isCatalogableClass(element)) {
+            final categorization = categorize(element);
+            if (categorization.isUncategorized) uncategorizedCount++;
+
+            final doc = parseDoc(
+              element.documentationComment ?? '',
+              flutterSrcRoot: flutterSrcRoot,
+            );
+
+            final isDeprecated = isElementDeprecated(element);
+            if (isDeprecated) deprecatedCount++;
+
+            preliminary.add(
+              _PreliminaryWidget(
+                name: name,
+                topLevel: categorization.designSystem.topLevelLabel,
+                designSystem: categorization.designSystem.name,
+                categories: categorization.categories,
+                summary: doc.summary,
+                overviewMarkdown: doc.overviewMarkdown,
+                isDeprecated: isDeprecated,
+                superChain: element.allSupertypes
+                    .map((t) => t.element.name ?? '')
+                    .where((n) => n.isNotEmpty)
+                    .toList(),
+                seeAlsoCandidates: doc.seeAlsoCandidates,
+                constructors: extractConstructors(element),
+                properties: extractProperties(element),
+                methods: extractMethods(element),
+                codeSamples: doc.codeSamples,
+                youtubeUrls: doc.youtubeUrls,
+              ),
+            );
+          } else if (element is EnumElement) {
+            enumRecords.add(
+              EnumRecord(
+                name: name,
+                documentation: cleanShortDoc(
+                  element.documentationComment ?? '',
+                ),
+                values: extractEnumValues(element),
+              ),
+            );
+          }
+          // Anything else (mixins, extensions, top-level functions,
+          // non-widget classes) is intentionally out of scope for a
+          // *widget* catalog — the original widgets_extractor.dart dumped
+          // all of these, but nothing downstream (model.dart, the Rust
+          // schema) consumes them.
+        } catch (e) {
+          // A single element failing to extract (an unresolved supertype,
+          // an analyzer edge case on one odd constructor signature, etc.)
+          // must never take the rest of the run down with it, and must
+          // never disappear silently either — both of which were possible
+          // before: an uncaught throw here would abort `run()` entirely
+          // (crashing the whole extraction over one widget), while any
+          // caller-side swallowing would drop the widget with zero trace
+          // of why. Recording it and moving on keeps every other widget
+          // in `$fileName` intact and gives the end-of-run summary
+          // something concrete to point at instead of a silent gap.
+          extractionFailures.add('$name (from $fileName): $e');
+        }
+      }
+    }, onProgress: onProgress);
+
+    // Sorted for deterministic output — a seed artifact must not reorder
+    // itself between runs/machines just because iteration order over the
+    // export namespaces isn't guaranteed.
+    preliminary.sort((a, b) => a.name.compareTo(b.name));
+    enumRecords.sort((a, b) => a.name.compareTo(b.name));
+
+    onProgress?.call(
+      '📦 Classified ${preliminary.length} widgets and '
+      '${enumRecords.length} enums.',
+    );
+
+    // --- Second pass: resolve See-also candidates into related_widget_name.
+    // Pure lookup against `knownWidgetNames` — no analyzer element access,
+    // so this can't reintroduce the staleness problem the single-pass
+    // restructuring above fixed.
+    final knownWidgetNames = preliminary.map((w) => w.name).toSet();
+    final widgetRecords = preliminary.map((w) {
+      String? relatedGuess;
+      for (final candidate in w.seeAlsoCandidates) {
+        if (candidate != w.name && knownWidgetNames.contains(candidate)) {
+          relatedGuess = candidate;
+          break;
+        }
+      }
+      return w.toWidgetRecord(relatedWidgetName: relatedGuess);
+    }).toList();
+
+    if (extractionFailures.isNotEmpty) {
+      onProgress?.call(
+        '⚠️  ${extractionFailures.length} element(s) failed extraction and '
+        'were skipped:',
       );
-
-      final isDeprecated = isElementDeprecated(element);
-      if (isDeprecated) deprecatedCount++;
-
-      widgetRecords.add(
-        WidgetRecord(
-          name: element.name ?? '',
-          topLevel: categorization.designSystem.topLevelLabel,
-          designSystem: categorization.designSystem.name,
-          categories: categorization.categories,
-          summary: doc.summary,
-          overviewMarkdown: doc.overviewMarkdown,
-          isDeprecated: isDeprecated,
-          superChain: element.allSupertypes
-              .map((t) => t.element.name ?? '')
-              .where((name) => name.isNotEmpty)
-              .toList(),
-          relatedWidgetName: doc.relatedWidgetNameGuess,
-          constructors: extractConstructors(element),
-          properties: extractProperties(element),
-          methods: extractMethods(element),
-          codeSamples: doc.codeSamples,
-          youtubeUrls: doc.youtubeUrls,
-        ),
-      );
+      for (final failure in extractionFailures) {
+        onProgress?.call('   - $failure');
+      }
     }
-
-    final enumRecords = enumElements
-        .map(
-          (element) => EnumRecord(
-            name: element.name ?? '',
-            documentation: cleanShortDoc(element.documentationComment ?? ''),
-            values: extractEnumValues(element),
-          ),
-        )
-        .toList();
 
     onProgress?.call(
       '✅ Extraction complete — '
@@ -164,5 +212,62 @@ class CatalogExtractor {
     if (!versionFile.existsSync()) return null;
     final content = versionFile.readAsStringSync().trim();
     return content.isEmpty ? null : content;
+  }
+}
+
+/// Everything a [WidgetRecord] needs except `relatedWidgetName`, which
+/// can't be known until every barrel has been visited (see [CatalogExtractor.run]).
+/// Kept as plain data — no analyzer `Element` reference held past the
+/// callback that created it.
+class _PreliminaryWidget {
+  final String name;
+  final String topLevel;
+  final String designSystem;
+  final List<String> categories;
+  final String summary;
+  final String overviewMarkdown;
+  final bool isDeprecated;
+  final List<String> superChain;
+  final List<String> seeAlsoCandidates;
+  final List<ConstructorRecord> constructors;
+  final List<PropertyRecord> properties;
+  final List<MethodRecord> methods;
+  final List<CodeSampleRecord> codeSamples;
+  final List<String> youtubeUrls;
+
+  _PreliminaryWidget({
+    required this.name,
+    required this.topLevel,
+    required this.designSystem,
+    required this.categories,
+    required this.summary,
+    required this.overviewMarkdown,
+    required this.isDeprecated,
+    required this.superChain,
+    required this.seeAlsoCandidates,
+    required this.constructors,
+    required this.properties,
+    required this.methods,
+    required this.codeSamples,
+    required this.youtubeUrls,
+  });
+
+  WidgetRecord toWidgetRecord({required String? relatedWidgetName}) {
+    return WidgetRecord(
+      name: name,
+      topLevel: topLevel,
+      designSystem: designSystem,
+      categories: categories,
+      summary: summary,
+      overviewMarkdown: overviewMarkdown,
+      isDeprecated: isDeprecated,
+      superChain: superChain,
+      relatedWidgetName: relatedWidgetName,
+      constructors: constructors,
+      properties: properties,
+      methods: methods,
+      codeSamples: codeSamples,
+      youtubeUrls: youtubeUrls,
+    );
   }
 }

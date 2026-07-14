@@ -1,6 +1,4 @@
 # https://dart.dev/tools/private-files
 # Created by `dart pub`
 .dart_tool/
-the_new_catalog.json
-widget_categories.json
-new_widgets_data.json
+outputs/**

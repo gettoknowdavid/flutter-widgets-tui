@@ -20,7 +20,17 @@ class ParsedDoc {
   final String overviewMarkdown;
   final List<CodeSampleRecord> codeSamples;
   final List<String> youtubeUrls;
-  final String? relatedWidgetNameGuess;
+
+  /// Every bracketed reference found under a "See also:" header, in doc
+  /// order, *before* checking any of them against a known-widget-names
+  /// set — that check now happens as a separate, cheap, pure-data step
+  /// once every widget in the run has been extracted (see
+  /// `CatalogExtractor.run()`), so [parseDoc] itself never needs the full
+  /// `knownWidgetNames` set up front and can run immediately, right after
+  /// each widget's own extraction, rather than waiting on every other
+  /// barrel file to finish resolving first.
+  final List<String> seeAlsoCandidates;
+
   final bool hadUnresolvedMacros;
 
   ParsedDoc({
@@ -28,7 +38,7 @@ class ParsedDoc {
     required this.overviewMarkdown,
     required this.codeSamples,
     required this.youtubeUrls,
-    required this.relatedWidgetNameGuess,
+    required this.seeAlsoCandidates,
     required this.hadUnresolvedMacros,
   });
 }
@@ -93,31 +103,24 @@ String cleanShortDoc(String raw) {
 
 /// Full widget-level doc comment parse.
 ///
-/// [knownWidgetNames] is used only for the best-effort "See also:"
-/// related-widget guess — pass the full set of extracted widget names so
-/// a bracketed reference like `[GridView]` only becomes a guess if
-/// `GridView` is something this run actually catalogued (avoids guessing
-/// at names that turn out to be typos, deprecated/removed classes, or
-/// non-widget types like `[ScrollController]`).
-///
 /// [flutterSrcRoot], if provided, is the *root* of the Flutter SDK
 /// checkout (the directory containing both `packages/` and `examples/`) —
 /// used to resolve `{@tool dartpad}` blocks' `** See code in
 /// examples/api/... **` markers into actual source. If omitted, or the
 /// referenced file doesn't exist, the resulting [CodeSampleRecord] still
 /// carries `examplePath` but has empty `code`.
-ParsedDoc parseDoc(
-  String raw, {
-  required Set<String> knownWidgetNames,
-  String? flutterSrcRoot,
-}) {
+///
+/// Does NOT take a `knownWidgetNames` set — see [ParsedDoc.seeAlsoCandidates].
+/// Resolving a candidate into an actual `related_widget_name` is the
+/// caller's job, once it knows the full set of widgets this run found.
+ParsedDoc parseDoc(String raw, {String? flutterSrcRoot}) {
   if (raw.trim().isEmpty) {
     return ParsedDoc(
       summary: 'No summary available.',
       overviewMarkdown: '',
       codeSamples: const [],
       youtubeUrls: const [],
-      relatedWidgetNameGuess: null,
+      seeAlsoCandidates: const [],
       hadUnresolvedMacros: false,
     );
   }
@@ -176,23 +179,20 @@ ParsedDoc parseDoc(
     return '';
   });
 
-  // --- "See also:" bullet list -> best-effort related-widget guess ------
-  // Deliberately best-effort: takes the FIRST bracketed reference under a
-  // "See also:" header that matches a known widget name from this run.
-  // This is a starting point for `related_widget_id` resolution on the
-  // Rust side (Section 4.2's cross-reference two-pass insert), not a
-  // guarantee of the "best" or most relevant related widget — a human
-  // reviewing seed content can always override it.
-  String? relatedGuess;
+  // --- "See also:" bullet list -> candidate related-widget names --------
+  // Collects every bracketed reference under a "See also:" header, in
+  // order, with no filtering against a known-widget-names set yet — that
+  // happens later (see `CatalogExtractor.run()`'s second pass), once the
+  // full set of widgets this run catalogued is known. Deliberately
+  // best-effort even then: the first candidate that turns out to name a
+  // real cataloged widget wins, not necessarily the "best" or most
+  // relevant one — a human reviewing seed content can always override it.
+  final seeAlsoCandidates = <String>[];
   final seeAlsoIdx = _seeAlsoHeaderRe.firstMatch(body)?.end;
   if (seeAlsoIdx != null) {
     final tail = body.substring(seeAlsoIdx);
     for (final m in _bracketRefRe.allMatches(tail)) {
-      final candidate = m.group(1)!.split('.').first;
-      if (knownWidgetNames.contains(candidate)) {
-        relatedGuess = candidate;
-        break;
-      }
+      seeAlsoCandidates.add(m.group(1)!.split('.').first);
     }
   }
 
@@ -212,7 +212,7 @@ ParsedDoc parseDoc(
     overviewMarkdown: body,
     codeSamples: codeSamples,
     youtubeUrls: youtubeUrls,
-    relatedWidgetNameGuess: relatedGuess,
+    seeAlsoCandidates: seeAlsoCandidates,
     hadUnresolvedMacros: hadMacros,
   );
 }

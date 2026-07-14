@@ -5,18 +5,34 @@ import 'dart:io';
 
 import 'package:analyzer/dart/element/element.dart';
 
-/// Widget detection + categorization.
+/// Class detection + categorization.
 ///
 /// Replaces `catalog_extractor.dart`'s original `docs.flutter.dev` HTML
 /// scraping *inline in the extraction pipeline*, per the TRD's principle
 /// ("SDK source is the authoritative data source") — but see the important
 /// caveat below before assuming that principle covers everything.
 ///
+/// This file no longer gates entries on "is this a `Widget` subclass?".
+/// Earlier, [isCatalogableClass] (then named `isWidgetElement`) required
+/// `Widget` to appear somewhere in `allSupertypes` before a class was
+/// included at all — which meant every class the catalog cared about was
+/// only ever as complete as that one check, and a class that was
+/// genuinely a widget but hit any analyzer edge case in its supertype
+/// resolution would simply vanish from the output with nothing logged to
+/// explain why. The scope is intentionally wider now: any real,
+/// publicly-exported `package:flutter` class is catalogable, matching
+/// what `bin/widgets_extractor.dart` (the original single-pass reference
+/// implementation) always did. Non-widget classes (`BuildContext`,
+/// `GlobalKey`, controllers, etc.) show up alongside widgets now; nothing
+/// downstream needs to distinguish them, and `superChain` on each
+/// resulting record still shows exactly what a class does or doesn't
+/// extend for anyone who wants to filter client-side.
+///
 /// Categorization has two genuinely different tiers, with different levels
 /// of reliability, and it's important not to conflate them:
 ///
 ///  1. [DesignSystemTier] (Material / Cupertino / base) is derived from the
-///     declaring library's file path — a Material/Cupertino widget is
+///     declaring library's file path — a Material/Cupertino class is
 ///     always physically under `src/material/` or `src/cupertino/` in the
 ///     Flutter SDK. This is 100% reliable, structural, and needs zero
 ///     curation. It will never silently drift the way scraped HTML can.
@@ -43,7 +59,9 @@ import 'package:analyzer/dart/element/element.dart';
 ///     means re-running that script and committing a new JSON file, never
 ///     touching this Dart code. That is what "future-proof" actually looks
 ///     like here, as distinct from a map that needs a PR every time Flutter
-///     ships a widget.
+///     ships a widget. Non-widget classes simply have no entry in that
+///     curated file and fall back to `categories: []`, same as an
+///     uncurated widget would.
 ///
 ///     `categories` is a `List<String>` (not a single string) because most
 ///     widgets genuinely belong to more than one docs.flutter.dev page —
@@ -54,21 +72,14 @@ import 'package:analyzer/dart/element/element.dart';
 ///     the bug that silently dropped a widget's other categories before).
 
 // ---------------------------------------------------------------------------
-// Widget detection
+// Class detection
 // ---------------------------------------------------------------------------
 
-bool isWidgetElement(ClassElement element) {
-  if (!_hasRealSourceFile(element)) {
-    // See _hasRealSourceFile's doc comment: this is the isSynthetic
-    // replacement. Guards against classes attributed to a library the
-    // analyzer synthesized rather than resolved from an actual file on
-    // disk (e.g. certain error-recovery / augmentation edge cases) —
-    // these are not real widgets and would otherwise pollute the catalog
-    // with meaningless entries.
-    return false;
-  }
-  return element.allSupertypes.any((t) => (t.element.name ?? '') == 'Widget');
-}
+/// Whether [element] belongs in the catalog at all. The only remaining
+/// disqualifier is [_hasRealSourceFile] — there is deliberately no
+/// `Widget`-subtype check here anymore (see this file's top-of-file doc
+/// comment for why).
+bool isCatalogableClass(ClassElement element) => _hasRealSourceFile(element);
 
 /// Replacement for the deprecated `LibraryElement.isSynthetic` check.
 ///
@@ -76,7 +87,11 @@ bool isWidgetElement(ClassElement element) {
 /// `LibraryElement.isOriginNotExistingFile` — `true` means "this library
 /// has no backing source file," which is exactly what `isSynthetic` used
 /// to signal for libraries. `isOriginNotExistingFile == true` is the
-/// synthetic case, so this helper inverts it.
+/// synthetic case, so this helper inverts it. Guards against classes
+/// attributed to a library the analyzer synthesized rather than resolved
+/// from an actual file on disk (e.g. certain error-recovery / augmentation
+/// edge cases) — these are not real SDK classes and would otherwise
+/// pollute the catalog with meaningless entries.
 ///
 /// Pinned against `analyzer: 13.3.0` per `pubspec.yaml`. If you bump that
 /// version, re-verify this against the new version's changelog before

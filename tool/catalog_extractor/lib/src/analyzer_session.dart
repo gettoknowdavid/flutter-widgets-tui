@@ -53,52 +53,78 @@ class AnalyzerSession {
     return files;
   }
 
-  /// Resolves every barrel file and returns the union of their public
-  /// export namespaces, keyed by name and deduplicated so a symbol
-  /// re-exported from multiple barrels is only processed once — and,
-  /// thanks to [discoverBarrelFiles]'s sort, always resolves to the same
-  /// winner across runs and machines.
+  /// Resolves every barrel file **one at a time** and, for each, invokes
+  /// [onNamespace] immediately with that barrel's public export namespace
+  /// — before moving on to resolve the next (often much larger) barrel.
   ///
-  /// Map values are deliberately left untyped (`dynamic`) rather than
-  /// annotated with analyzer's element-model base type: that name has
-  /// shifted across analyzer versions during the "Element2" migration,
-  /// and every consumer of this map immediately narrows via a runtime
-  /// `is ClassElement` / `is EnumElement` check anyway (see
-  /// `catalog_extractor.dart`), which works identically regardless of the
-  /// map's static value type.
-  Future<Map<String, dynamic>> resolvePublicExportNamespace({
+  /// This replaces an earlier two-phase design that resolved *every*
+  /// barrel first, stashed the raw `Element`s from all of them in one
+  /// long-lived `Map`, and only walked/extracted from those elements
+  /// afterwards, once every barrel — including `material.dart` and
+  /// `widgets.dart`, each of which transitively touches most of the SDK —
+  /// had already been resolved. `AnalysisContextCollection` does not
+  /// guarantee that every `Element` it has ever handed out stays backed by
+  /// a live AST forever; resolving dozens of large, overlapping libraries
+  /// into the *same* session before touching any of their members is
+  /// exactly the access pattern that risks an early barrel's elements
+  /// going stale (empty `allSupertypes`, empty `constructors`, etc.) by
+  /// the time something reads them minutes later — which manifests as a
+  /// widget that is unambiguously public and unambiguously a `Widget`
+  /// subclass (e.g. `CupertinoAdaptiveTextSelectionToolbar`) silently
+  /// failing `isWidgetElement` and dropping out of the catalog, with
+  /// nothing in the logs to explain why.
+  ///
+  /// Doing the classify-and-extract work for a barrel's namespace
+  /// immediately, inside this loop, means every `Element` this tool ever
+  /// inspects is read back essentially as soon as the analyzer produced
+  /// it — matching how the original single-pass `widgets_extractor.dart`
+  /// extracted immediately per file — while still visiting every barrel
+  /// exactly once, in the same deterministic sorted order as before.
+  ///
+  /// [onNamespace] receives the resolved library's `exportNamespace`
+  /// directly; callers are responsible for their own cross-barrel
+  /// dedup (first barrel in sorted order should win — see
+  /// `CatalogExtractor.run()`), since this method deliberately doesn't
+  /// hold any state between barrels itself.
+  ///
+  /// The namespace parameter is deliberately typed `dynamic` rather than
+  /// analyzer's own export-namespace class — same rationale as
+  /// [belongsToFlutterPackage]'s `Element` parameter being as loosely
+  /// typed as the rest of this file allows: the exact class backing
+  /// `LibraryElement.exportNamespace` (and whether the member is called
+  /// `definedNames` or `definedNames2`) has shifted across analyzer
+  /// versions during the "Element2" migration. Every caller immediately
+  /// narrows via `.definedNames2.entries` today; if a future analyzer
+  /// upgrade renames that getter, exactly one call site (in
+  /// `CatalogExtractor.run()`) needs to change.
+  Future<void> forEachBarrelFile(
+    Future<void> Function(String fileName, dynamic namespace) onNamespace, {
     void Function(String message)? onProgress,
   }) async {
     final context = _collection.contextFor(flutterPackagePath);
     final session = context.currentSession;
-    final result = <String, dynamic>{};
 
     for (final file in discoverBarrelFiles()) {
-      onProgress?.call('Analyzing entry point: ${p.basename(file.path)}');
+      final fileName = p.basename(file.path);
+      onProgress?.call('Analyzing entry point: $fileName');
       final resolved = await session.getResolvedLibrary(file.path);
       if (resolved is! ResolvedLibraryResult) {
-        onProgress?.call('  ⚠ could not fully resolve ${file.path}');
+        onProgress?.call('  ⚠ could not fully resolve $fileName');
         continue;
       }
-
-      final exportNamespace = resolved.element.exportNamespace;
-      for (final entry in exportNamespace.definedNames2.entries) {
-        final element = entry.value;
-        final name = element.name;
-        if (name == null || name.startsWith('_')) continue;
-        if (!_belongsToFlutterPackage(element)) continue;
-
-        // First barrel (in sorted order) to define a given name wins.
-        // Dart itself forbids a class and, say, a top-level function from
-        // sharing one name within a single export namespace, so a plain
-        // name key (rather than a "kind:name" composite) is sufficient.
-        result.putIfAbsent(name, () => element);
-      }
+      await onNamespace(fileName, resolved.element.exportNamespace);
     }
-    return result;
   }
 
-  bool _belongsToFlutterPackage(dynamic element) {
+  /// Whether [element] is actually declared in `package:flutter` itself
+  /// (as opposed to `dart:ui`, another pub package, or an analyzer-only
+  /// synthetic library) — the same three-URI-shape check every export
+  /// namespace entry needs before it's trusted as real SDK surface.
+  ///
+  /// Deliberately `dynamic`, not analyzer's `Element`/`Element2` base
+  /// type — same version-agnostic rationale as [forEachBarrelFile]'s
+  /// `namespace` parameter.
+  bool belongsToFlutterPackage(dynamic element) {
     final uri = element.library?.uri.toString() ?? '';
     if (uri.startsWith('dart:')) return false;
     if (uri.startsWith('package:') && !uri.startsWith('package:flutter/')) {
