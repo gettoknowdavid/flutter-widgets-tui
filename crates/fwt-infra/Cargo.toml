@@ -8,3 +8,10 @@ publish = false
 
 [dependencies]
 fwt-domain = { path = "../fwt-domain" }
+rusqlite = { version = "0.40.1", features = ["bundled"] }
+rusqlite_migration = "2.6.0"
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tempfile = "3.26.0"
+pretty_assertions = "1.4.1"

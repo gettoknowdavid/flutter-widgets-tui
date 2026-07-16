@@ -1,0 +1,63 @@
+name = "ListView"
+top_level = "Base Widgets"
+design_system = "base"
+categories = ["Scrolling"]
+summary = "A scrollable, linear list of widgets."
+overview_markdown = """
+A scrollable, linear list of widgets. Lazily builds children as they scroll into view — the default choice for long or unbounded lists.
+
+Use when: content is a linear sequence and may exceed screen height.
+Avoid when: you need 2D scrolling → use GridView instead.
+"""
+related_widget_name = "GridView"
+flutter_channel = "stable"
+
+[[constructors]]
+name = "ListView.builder"
+documentation = "Creates a scrollable, linear array of widgets that are created on demand."
+
+[[constructors.parameters]]
+name = "itemCount"
+type = "int?"
+is_required = false
+is_named = true
+
+[[constructors.parameters]]
+name = "itemBuilder"
+type = "IndexedWidgetBuilder"
+is_required = true
+is_named = true
+
+[[properties]]
+name = "scrollDirection"
+type = "Axis"
+default_value = "Axis.vertical"
+description = "The axis along which the scroll view scrolls."
+input_kind = "enum"
+enum_options = ["horizontal", "vertical"]
+
+[[properties]]
+name = "reverse"
+type = "bool"
+default_value = "false"
+input_kind = "bool"
+
+[[methods]]
+name = "createElement"
+return_type = "MultiChildRenderObjectElement"
+kind = "instance"
+description = "Inherited from Widget."
+declared_on = "Widget"
+is_inherited = true
+
+[[code_samples]]
+label = "Basic usage"
+kind = "snippet"
+code = """
+ListView.builder(
+  itemCount: items.length,
+  itemBuilder: (context, i) {
+    return ListTile(title: Text(items[i]));
+  },
+)
+"""

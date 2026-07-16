@@ -1,0 +1,8 @@
+name = "GridView"
+top_level = "Base Widgets"
+design_system = "base"
+categories = ["Scrolling", "Layout"]
+summary = "A scrollable, 2D array of widgets."
+overview_markdown = "A scrollable grid layout, the 2D counterpart to ListView."
+related_widget_name = "ListView"
+flutter_channel = "stable"

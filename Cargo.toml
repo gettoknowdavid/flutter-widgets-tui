@@ -17,12 +17,21 @@ license = "MIT"
 publish = false
 
 [workspace.dependencies]
-clap = { version = "4.6.1", features = ["derive"] }
+clap = { version = "4.6.2", features = ["derive"] }
 crossterm = "0.29.0"
 futures-util = "0.3.32"
 ratatui = "0.30.2"
 serde = { version = "1.0.228", features = ["derive"] }
 thiserror = "2.0.18"
-tokio = { version = "1.52.3", features = ["macros", "rt-multi-thread", "signal", "sync", "time"] }
+tokio = { version = "1.52.3", features = [
+    "macros",
+    "rt-multi-thread",
+    "signal",
+    "sync",
+    "time",
+] }
 tracing = "0.1.44"
-uuid = { version = "1.23.4", features = ["v4"] }
+uuid = { version = "1.24.0", features = ["v4"] }
+
+[alias]
+xtask = "run --package xtask --"

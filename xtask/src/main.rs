@@ -25,6 +25,12 @@
 //! dispatched from `main()`, following the same pattern as
 //! `check_boundaries` below.
 
+mod migrations;
+mod seed_catalog;
+
+use clap::{Parser, Subcommand};
+use std::path::PathBuf;
+
 use cargo_metadata::{CargoOpt, MetadataCommand, Package, PackageId};
 use std::collections::{HashMap, HashSet, VecDeque};
 
@@ -37,34 +43,62 @@ const FORBIDDEN_FOR_DOMAIN: &[&str] = &["ratatui", "sqlx", "tokio", "reqwest", "
 /// in case the crate is ever renamed.
 const PROTECTED_CRATE: &str = "fwt-domain";
 
-fn main() -> std::process::ExitCode {
-    let mut args = std::env::args().skip(1);
-    match args.next().as_deref() {
-        Some("check-boundaries") | None => run_check_boundaries(),
-        Some("help") | Some("--help") | Some("-h") => {
-            print_help();
-            std::process::ExitCode::SUCCESS
+#[derive(Parser)]
+struct Cli {
+    #[command(subcommand)]
+    command: Command,
+}
+
+#[derive(Subcommand)]
+enum Command {
+    /// (Ticket 001) Verify fwt-domain's dependency graph has no
+    /// forbidden I/O-bearing crates.
+    CheckBoundaries,
+
+    /// Build a fresh catalog.db from assets/catalog_seed/.
+    SeedCatalog {
+        #[arg(long, default_value = "assets/catalog_seed")]
+        seed_dir: PathBuf,
+
+        #[arg(long, default_value = "catalog.db")]
+        output: PathBuf,
+
+        #[arg(long)]
+        force: bool,
+    },
+}
+
+fn main() -> anyhow::Result<()> {
+    let cli = Cli::parse();
+    match cli.command {
+        Command::CheckBoundaries => {
+            run_check_boundaries();
+            Ok(())
         }
-        Some(other) => {
-            eprintln!("xtask: unknown command '{other}'\n");
-            print_help();
-            std::process::ExitCode::FAILURE
-        }
+        Command::SeedCatalog {
+            seed_dir,
+            output,
+            force,
+        } => seed_catalog::run(seed_catalog::SeedCatalogArgs {
+            seed_dir,
+            output_path: output,
+            force,
+        }),
     }
 }
 
-fn print_help() {
-    println!(
-        "xtask — workspace dev tooling\n\
-         \n\
-         USAGE:\n\
-         \x20\x20cargo xtask [COMMAND]\n\
-         \n\
-         COMMANDS:\n\
-         \x20\x20check-boundaries   Verify fwt-domain has no forbidden dependencies (default if no command given)\n\
-         \x20\x20help                Print this message\n"
-    );
-}
+// fn print_help() {
+//     println!(
+//         "xtask — workspace dev tooling\n\
+//          \n\
+//          USAGE:\n\
+//          \x20\x20cargo xtask [COMMAND]\n\
+//          \n\
+//          COMMANDS:\n\
+//          \x20\x20check-boundaries   Verify fwt-domain has no forbidden dependencies (default if no command given)\n\
+//          \x20\x20help                Print this message\n"
+//     );
+// }
 
 /// Runs the dependency-boundary check against both the default feature
 /// resolution and the all-features resolution, printing a clear report

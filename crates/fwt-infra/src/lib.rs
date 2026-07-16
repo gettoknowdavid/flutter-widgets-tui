@@ -9,3 +9,5 @@
 //! `fwt-app` or `fwt-tui` — infrastructure adapters are wired into the
 //! application layer via dependency injection from `fwt-cli`, never the
 //! reverse.
+
+pub mod db;
