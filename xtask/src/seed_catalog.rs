@@ -439,7 +439,7 @@ fn insert_enums(tx: &Transaction, enums: &[(String, SeedEnum)]) -> Result<()> {
 /// samples). Returns a `widget_name -> database_id` map that Pass 2
 /// uses to resolve `related_widget_name` references — this two-pass
 /// split is required because a widget's related-widget target may not
-/// have been inserted yet (including mutual references, e.g.
+/// have been inserted yet (including mutual references, e.g.,
 /// ListView <-> GridView, which are valid and NOT a cycle to reject).
 fn insert_widgets_pass_one(
     tx: &Transaction,
@@ -658,7 +658,7 @@ pub fn run(args: SeedCatalogArgs) -> Result<()> {
 
     // Build to a temp path first, then atomically rename into place —
     // an accidental double-seed or a mid-run failure must never leave
-    // a partially-seeded, confusing file at the real output path.
+    // a partially seeded, confusing file at the real output path.
     let tmp_path = args.output_path.with_extension("db.building");
     if tmp_path.exists() {
         fs::remove_file(&tmp_path)?;
