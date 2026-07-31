@@ -311,31 +311,16 @@ impl fwt_domain::ports::catalog_repository::CatalogRepository for SqliteCatalogR
             let mut stmt = conn
                 .prepare(
                     "SELECT DISTINCT w.id, w.name, w.summary, w.design_system, w.categories
-                     FROM widgets w, json_each(w.categories) AS je
-                     WHERE je.value = ?1
-                     ORDER BY w.name ASC",
+                 FROM widgets w, json_each(w.categories) AS je
+                 WHERE je.value = ?1
+                 ORDER BY w.name ASC",
                 )
                 .map_err(query_failed)?;
 
-            let rows = stmt
-                .query_map(params![category], |row| {
-                    widget_summary_from_row(row)
-                        .map_err(|e| rusqlite::Error::ToSqlConversionFailure(Box::new(e)))
-                })
-                .map_err(query_failed)?;
-
-            let mut stmt2 = conn
-                .prepare(
-                    "SELECT DISTINCT w.id, w.name, w.summary, w.design_system, w.categories
-                     FROM widgets w, json_each(w.categories) AS je
-                     WHERE je.value = ?1
-                     ORDER BY w.name ASC",
-                )
-                .map_err(query_failed)?;
-            let mut result_rows = stmt2.query(params![category]).map_err(query_failed)?;
+            let mut rows = stmt.query(params![category]).map_err(query_failed)?;
 
             let mut results = Vec::new();
-            while let Some(row) = result_rows.next().map_err(query_failed)? {
+            while let Some(row) = rows.next().map_err(query_failed)? {
                 results.push(widget_summary_from_row(row)?);
             }
             Ok(results)
