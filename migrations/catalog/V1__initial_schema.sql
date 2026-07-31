@@ -5,7 +5,7 @@ PRAGMA foreign_keys = ON;
 -- ------------------------------------------------------------
 CREATE TABLE widgets
 (
-    id                   INETEGER PRIMARY KEY,
+    id                   INTEGER PRIMARY KEY,
     name                 TEXT    NOT NULL UNIQUE,
     top_level            TEXT    NOT NULL,
     design_system        TEXT    NOT NULL DEFAULT 'base' CHECK (
