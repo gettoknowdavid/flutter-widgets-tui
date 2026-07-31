@@ -43,13 +43,13 @@ impl SqliteCatalogRepository {
         })
     }
 
-    /// Internal helper: checks out a pooled connection inside the
-    /// caller's `spawn_blocking` closure. Not `pub` — every trait method
-    /// below is the only place this is called, keeping the
-    /// `spawn_blocking` boundary consistent everywhere.
-    fn checkout(&self) -> Result<r2d2::PooledConnection<SqliteConnectionManager>, RepositoryError> {
-        self.pool.get().map_err(|_| RepositoryError::PoolExhausted)
-    }
+    // /// Internal helper: checks out a pooled connection inside the
+    // /// caller's `spawn_blocking` closure. Not `pub` — every trait method
+    // /// below is the only place this is called, keeping the
+    // /// `spawn_blocking` boundary consistent everywhere.
+    // fn checkout(&self) -> Result<r2d2::PooledConnection<SqliteConnectionManager>, RepositoryError> {
+    //     self.pool.get().map_err(|_| RepositoryError::PoolExhausted)
+    // }
 }
 
 // -----------------------------------------------------------------------
@@ -87,10 +87,11 @@ fn parse_parameters(raw: &str) -> Result<Vec<Parameter>, RepositoryError> {
         return Ok(Vec::new());
     }
 
-    let parsed: Vec<RawParam> = serde_json::from_str(raw).map_err(|e| RepositoryError::Serialization {
-        column: "parameters".to_string(),
-        source: Box::new(e),
-    })?;
+    let parsed: Vec<RawParam> =
+        serde_json::from_str(raw).map_err(|e| RepositoryError::Serialization {
+            column: "parameters".to_string(),
+            source: Box::new(e),
+        })?;
 
     Ok(parsed
         .into_iter()
@@ -108,15 +109,15 @@ fn parse_parameters(raw: &str) -> Result<Vec<Parameter>, RepositoryError> {
         .collect())
 }
 
-fn row_to_widget(row: &Row) -> rusqlite::Result<(Widget, ())> {
-    // Extracted as a fallible closure so widget_from_row (below) can
-    // surface WidgetValidationError distinctly from rusqlite::Error —
-    // rusqlite's row-mapping closures must return rusqlite::Result, so
-    // JSON/validation errors are deferred to the caller via a raw tuple
-    // of pre-parsed columns, mapped into domain types just outside the
-    // rusqlite query_row/query_map closure.
-    unreachable!("see widget_from_row below — this stub exists only for doc clarity")
-}
+// fn row_to_widget(row: &Row) -> rusqlite::Result<(Widget, ())> {
+//     // Extracted as a fallible closure so widget_from_row (below) can
+//     // surface WidgetValidationError distinctly from rusqlite::Error —
+//     // rusqlite's row-mapping closures must return rusqlite::Result, so
+//     // JSON/validation errors are deferred to the caller via a raw tuple
+//     // of pre-parsed columns, mapped into domain types just outside the
+//     // rusqlite query_row/query_map closure.
+//     unreachable!("see widget_from_row below — this stub exists only for doc clarity")
+// }
 
 /// Maps one fully-selected `widgets` row into a `Widget`. Called from
 /// both `get_widget_by_id` and `get_widget_by_name` — kept as a single
@@ -137,7 +138,6 @@ fn widget_from_row(row: &Row) -> Result<Widget, RepositoryError> {
     let flutter_stable_since: Option<String> =
         row.get("flutter_stable_since").map_err(query_failed)?;
     let flutter_channel: String = row.get("flutter_channel").map_err(query_failed)?;
-
     let design_system =
         DesignSystem::parse(&design_system_raw).map_err(|e| RepositoryError::Serialization {
             column: "design_system".to_string(),
