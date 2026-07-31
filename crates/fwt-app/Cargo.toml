@@ -8,6 +8,8 @@ publish = false
 
 [dependencies]
 crossterm = { workspace = true }
+fwt-domain = { path = "../fwt-domain" }
+nucleo-matcher = "0.3.1"
 tokio = { workspace = true }
 
 [dev-dependencies]

@@ -1,0 +1,87 @@
+# query -> expected top-1 widget name. `tolerance = "top3"` allows a looser
+# pass condition for ambiguous natural-language queries.
+
+[[cases]]
+query = "ListView"
+expected = "ListView"
+tolerance = "top1"
+
+[[cases]]
+query = "Lisview"
+expected = "ListView"
+tolerance = "top1"
+
+[[cases]]
+query = "listvie"
+expected = "ListView"
+tolerance = "top1"
+
+[[cases]]
+query = "scroll"
+expected = "ListView"
+tolerance = "top3"
+
+[[cases]]
+query = "scrollable list"
+expected = "ListView"
+tolerance = "top1"
+
+[[cases]]
+query = "infinite scroll"
+expected = "ListView"
+tolerance = "top3"
+
+[[cases]]
+query = "GridView"
+expected = "GridView"
+tolerance = "top1"
+
+[[cases]]
+query = "2d grid"
+expected = "GridView"
+tolerance = "top3"
+
+[[cases]]
+query = "gridvie"
+expected = "GridView"
+tolerance = "top1"
+
+[[cases]]
+query = "grdiview"
+expected = "GridView"
+tolerance = "top1"
+
+[[cases]]
+query = "te"
+expected = "Text"
+tolerance = "top2"
+
+[[cases]]
+query = "tex"
+expected = "Text"
+tolerance = "top1"
+
+[[cases]]
+query = "text"
+expected = "Text"
+tolerance = "top1"
+
+[[cases]]
+query = "col"
+expected = "Column"
+tolerance = "top1"
+
+[[cases]]
+query = "column"
+expected = "Column"
+tolerance = "top1"
+
+[[cases]]
+query = "ro"
+expected = "Row"
+tolerance = "top1"
+
+[[cases]]
+query = "row"
+expected = "Row"
+tolerance = "top1"

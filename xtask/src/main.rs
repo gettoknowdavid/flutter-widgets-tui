@@ -27,6 +27,7 @@
 
 mod migrations;
 mod seed_catalog;
+mod spike;
 
 use clap::{Parser, Subcommand};
 use std::path::PathBuf;
