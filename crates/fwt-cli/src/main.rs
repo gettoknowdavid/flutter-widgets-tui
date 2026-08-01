@@ -4,7 +4,12 @@
 //! CLI flags, then (Ticket 004) builds the bounded-worker tokio runtime
 //! and hands control to `fwt_tui::app::run_event_loop`.
 
+use std::sync::Arc;
+
 use clap::Parser;
+use fwt_app::search_service::SearchService;
+use fwt_domain::ports::CatalogRepository;
+use fwt_infra::db::catalog_repo::SqliteCatalogRepository;
 
 pub mod logging;
 pub mod reset;
@@ -87,6 +92,20 @@ fn main() -> color_eyre::Result<()> {
         panic!("intentional test panic (--panic-test)");
     }
 
+    let db_path = cli.db_path.clone().unwrap_or_else(|| {
+        directories::ProjectDirs::from("dev", "flutterwidgets", "fwt")
+            .expect("could not determine OS data directory")
+            .data_local_dir()
+            .join("catalog.db")
+    });
+
+    let repo: Arc<dyn CatalogRepository> = Arc::new(
+        SqliteCatalogRepository::new(&db_path)
+            .map_err(|e| color_eyre::eyre::eyre!("failed to open catalog.db: {e}"))?,
+    );
+
+    let search_service = Arc::new(tokio::sync::Mutex::new(SearchService::new(repo)));
+
     let guard = fwt_tui::TerminalGuard::enter()?;
 
     tracing::info!(
@@ -106,7 +125,7 @@ fn main() -> color_eyre::Result<()> {
         .build()
         .map_err(|e| color_eyre::eyre::eyre!("failed to build tokio runtime: {e}"))?;
 
-    runtime.block_on(fwt_tui::app::run_event_loop(guard))?;
+    runtime.block_on(fwt_tui::app::run_event_loop(guard, search_service))?;
 
     Ok(())
 }

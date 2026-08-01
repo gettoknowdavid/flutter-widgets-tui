@@ -1,5 +1,5 @@
 use crate::command::Command;
-use crate::message::Message::{self, SearchResults};
+use crate::message::Message;
 use crate::navigation::{NavigationStack, Screen};
 use crate::outcome::UpdateOutcome;
 use crate::search_service::SearchResult;
@@ -109,7 +109,7 @@ pub fn update(state: &mut AppState, message: Message) -> UpdateOutcome {
         }
         Message::SearchResults(answered_query, results) => {
             if answered_query != state.search.query {
-                UpdateOutcome::redraw_only(false);
+                return UpdateOutcome::redraw_only(false);
             }
             state.search.results = results;
             state.search.selected_index = if state.search.results.is_empty() {

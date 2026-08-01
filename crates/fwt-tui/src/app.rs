@@ -57,7 +57,10 @@ pub enum EventLoopError {
 /// unrecoverable error). Consumes the `TerminalGuard` so the guard's
 /// `Drop` fires the instant this function returns, restoring the
 /// terminal before any caller-side cleanup runs.
-pub async fn run_event_loop(mut guard: TerminalGuard) -> Result<(), EventLoopError> {
+pub async fn run_event_loop(
+    mut guard: TerminalGuard,
+    search_service: Arc<tokio::sync::Mutex<SearchService>>,
+) -> Result<(), EventLoopError> {
     let mut state = AppState::default();
     let (tx, mut rx) = mpsc::channel::<Message>(MESSAGE_CHANNEL_CAPACITY);
 
