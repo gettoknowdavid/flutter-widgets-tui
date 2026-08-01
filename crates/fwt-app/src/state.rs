@@ -157,7 +157,7 @@ pub fn handle_shell_key(state: &mut AppState, key_event: KeyEvent) -> UpdateOutc
     }
 }
 
-pub fn handle_catalog_key(state: &mut AppState, key_event: KeyEvent) -> UpdateOutcome {
+pub fn handle_catalog_key(_state: &mut AppState, _key_event: KeyEvent) -> UpdateOutcome {
     UpdateOutcome::redraw_only(false)
 }
 
