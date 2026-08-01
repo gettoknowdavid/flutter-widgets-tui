@@ -10,4 +10,6 @@ pub enum Command {
     /// `Message::DebugTaskCompleted`, proving the Command-out/Message-in
     /// round trip works end-to-end.
     SimulatedDelay(std::time::Duration),
+    BuildSearchIndex,
+    Search(String),
 }

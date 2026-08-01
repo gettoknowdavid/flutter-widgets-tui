@@ -15,6 +15,8 @@
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Screen {
     Shell,
+    Catalog,
+    Search
 }
 
 /// A simple LIFO navigation history stack, backing the breadcrumb trail

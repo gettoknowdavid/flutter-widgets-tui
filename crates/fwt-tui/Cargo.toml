@@ -10,6 +10,7 @@ publish = false
 crossterm = { workspace = true, features = ["event-stream"] }
 futures-util = { workspace = true }
 fwt-app = { path = "../fwt-app" }
+fwt-domain = { path = "../fwt-domain" }
 ratatui = { workspace = true }
 thiserror = { workspace = true }
 tokio = { workspace = true }

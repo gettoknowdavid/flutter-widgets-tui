@@ -16,4 +16,5 @@ pub mod executor;
 pub mod message;
 pub mod navigation;
 pub mod outcome;
+pub mod search_service;
 pub mod state;

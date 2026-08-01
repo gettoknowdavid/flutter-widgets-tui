@@ -1,3 +1,5 @@
+use crate::search_service::SearchResult;
+
 /// Everything that can happen, from the event loop's perspective, reduced to
 /// a single closed set of variants. This is the ONLY input to `update()`.
 ///
@@ -31,4 +33,8 @@ pub enum Message {
     /// Graceful shutdown requested (quit key, Ctrl+C, SIGTERM — all funnel
     /// here, see app.rs section 3.3).
     Quit,
+
+    SearchIndexReady,
+
+    SearchResults(String, Vec<SearchResult>),
 }

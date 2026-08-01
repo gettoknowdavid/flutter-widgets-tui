@@ -17,17 +17,22 @@
 //! these per-iteration (a classic tokio footgun) would silently break —
 //! e.g. a `Sleep` recreated every loop never actually elapses.
 
+use std::sync::Arc;
 use std::time::Duration;
 
 use crossterm::event::{Event, EventStream, KeyEventKind};
 use futures_util::StreamExt;
 use fwt_app::executor;
 use fwt_app::message::Message;
+use fwt_app::navigation::Screen;
+use fwt_app::search_service::SearchService;
 use fwt_app::state::{update, AppState};
 use tokio::sync::mpsc;
 
 use crate::terminal::TerminalGuard;
 use crate::theme::Theme;
+use crate::views::catalog::render_catalog_view;
+use crate::views::search::render_search_view;
 use crate::widgets::app_shell::render_app_shell;
 
 /// How often the tick timer fires. Sufficient for future spinner/
@@ -54,7 +59,6 @@ pub enum EventLoopError {
 /// terminal before any caller-side cleanup runs.
 pub async fn run_event_loop(mut guard: TerminalGuard) -> Result<(), EventLoopError> {
     let mut state = AppState::default();
-
     let (tx, mut rx) = mpsc::channel::<Message>(MESSAGE_CHANNEL_CAPACITY);
 
     // Long-lived futures, constructed once, outside the loop.
@@ -99,7 +103,7 @@ pub async fn run_event_loop(mut guard: TerminalGuard) -> Result<(), EventLoopErr
         };
 
         let outcome = update(&mut state, message);
-        executor::dispatch_all(outcome.commands, &tx);
+        executor::dispatch_all(outcome.commands, &tx, Arc::clone(&search_service));
 
         if outcome.redraw {
             render(&mut guard, &state)?;
@@ -172,7 +176,12 @@ fn render(guard: &mut TerminalGuard, state: &AppState) -> Result<(), EventLoopEr
     let theme = Theme::default();
     guard.terminal.draw(|frame| {
         let area = frame.area();
-        let _content_rect = render_app_shell(frame, area, state, &theme);
+        let con_rect = render_app_shell(frame, area, state, &theme);
+        match state.navigation.current() {
+            Some(Screen::Catalog) => render_catalog_view(frame, con_rect, &state.catalog, &theme),
+            Some(Screen::Search) => render_search_view(frame, con_rect, &state.search, &theme),
+            _ => { /* Shell placeholder already rendered by AppShell */ }
+        }
     })?;
     Ok(())
 }

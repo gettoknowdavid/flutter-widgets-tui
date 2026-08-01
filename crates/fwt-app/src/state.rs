@@ -1,7 +1,10 @@
-use crate::message::Message;
+use crate::command::Command;
+use crate::message::Message::{self, SearchResults};
 use crate::navigation::{NavigationStack, Screen};
 use crate::outcome::UpdateOutcome;
-use crossterm::event::KeyEvent;
+use crate::search_service::SearchResult;
+use crossterm::event::{KeyCode, KeyEvent};
+use fwt_domain::widget::CategorySummary;
 
 /// Reachability of the AI/sync endpoints. Only AI Chat and
 /// GitHub Sync are gated by this — browsing, search, favorites
@@ -22,13 +25,20 @@ pub enum ThemeId {
     Default,
 }
 
-/// Epic 2: catalog browsing state.
-#[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
-pub struct CatalogStatePlaceholder;
+#[derive(Debug, Clone, Default)]
+pub struct CatalogState {
+    pub categories: Vec<CategorySummary>,
+    pub selected_index: Option<usize>,
+}
 
 /// Epic 2: search / fuzzy-match state.
-#[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
-pub struct SearchStatePlaceholder;
+#[derive(Debug, Clone, Default)]
+pub struct SearchState {
+    pub query: String,
+    pub results: Vec<SearchResult>,
+    pub index_ready: bool,
+    pub selected_index: Option<usize>,
+}
 
 /// Epic 3: widget detail view state (overview/code/properties/methods tabs).
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
@@ -50,8 +60,8 @@ pub struct AppState {
     pub should_quit: bool,
     pub terminal_size: (u16, u16),
 
-    pub catalog: CatalogStatePlaceholder,
-    pub search: SearchStatePlaceholder,
+    pub catalog: CatalogState,
+    pub search: SearchState,
     pub detail: DetailStatePlaceholder,
     pub favorites: FavoritesStatePlaceholder,
     pub chat: ChatStatePlaceholder,
@@ -67,8 +77,8 @@ impl Default for AppState {
             connectivity: ConnectivityStatus::default(),
             should_quit: false,
             terminal_size: (0, 0),
-            catalog: CatalogStatePlaceholder,
-            search: SearchStatePlaceholder,
+            catalog: CatalogState::default(),
+            search: SearchState::default(),
             detail: DetailStatePlaceholder,
             favorites: FavoritesStatePlaceholder,
             chat: ChatStatePlaceholder,
@@ -93,6 +103,22 @@ pub fn update(state: &mut AppState, message: Message) -> UpdateOutcome {
             state.should_quit = true;
             UpdateOutcome::redraw_only(true)
         }
+        Message::SearchIndexReady => {
+            state.search.index_ready = true;
+            UpdateOutcome::redraw_only(true)
+        }
+        Message::SearchResults(answered_query, results) => {
+            if answered_query != state.search.query {
+                UpdateOutcome::redraw_only(false);
+            }
+            state.search.results = results;
+            state.search.selected_index = if state.search.results.is_empty() {
+                None
+            } else {
+                Some(0)
+            };
+            UpdateOutcome::redraw_only(true)
+        }
     }
 }
 
@@ -109,7 +135,91 @@ fn handle_key(state: &mut AppState, key_event: KeyEvent) -> UpdateOutcome {
         return UpdateOutcome::redraw_only(true);
     }
 
+    match state.navigation.current() {
+        Some(Screen::Shell) => handle_shell_key(state, key_event),
+        Some(Screen::Catalog) => handle_catalog_key(state, key_event),
+        Some(Screen::Search) => handle_search_key(state, key_event),
+        None => UpdateOutcome::redraw_only(false),
+    }
+}
+
+pub fn handle_shell_key(state: &mut AppState, key_event: KeyEvent) -> UpdateOutcome {
+    match key_event.code {
+        KeyCode::Char('1') => {
+            state.navigation.push(Screen::Catalog);
+            UpdateOutcome::redraw_only(true)
+        }
+        KeyCode::Char('2') => {
+            state.navigation.push(Screen::Search);
+            UpdateOutcome::redraw_only(true)
+        }
+        _ => UpdateOutcome::redraw_only(false),
+    }
+}
+
+pub fn handle_catalog_key(state: &mut AppState, key_event: KeyEvent) -> UpdateOutcome {
     UpdateOutcome::redraw_only(false)
+}
+
+pub fn handle_search_key(state: &mut AppState, key_event: KeyEvent) -> UpdateOutcome {
+    match key_event.code {
+        KeyCode::Esc => {
+            state.navigation.pop();
+            UpdateOutcome::redraw_only(true)
+        }
+        KeyCode::Char(c) => {
+            state.search.query.push(c);
+            let outcome = UpdateOutcome {
+                commands: vec![Command::Search(state.search.query.clone())],
+                redraw: true,
+            };
+            outcome
+        }
+        KeyCode::Backspace => {
+            state.search.query.pop();
+            UpdateOutcome {
+                commands: vec![Command::Search(state.search.query.clone())],
+                redraw: true,
+            }
+        }
+        KeyCode::Down => {
+            move_selection(
+                &mut state.search.selected_index,
+                state.search.results.len(),
+                1,
+            );
+            UpdateOutcome::redraw_only(true)
+        }
+        KeyCode::Up => {
+            move_selection(
+                &mut state.search.selected_index,
+                state.search.results.len(),
+                -1,
+            );
+            UpdateOutcome::redraw_only(true)
+        }
+        KeyCode::Enter => {
+            if let Some(idx) = state.search.selected_index {
+                if let Some(result) = state.search.results.get(idx) {
+                    tracing::info!(widget_id = ?result.widget_id, "selected widget (detail view is Epic 3)");
+                }
+            }
+            UpdateOutcome::redraw_only(false)
+        }
+        _ => UpdateOutcome::redraw_only(false),
+    }
+}
+
+/// Clamped selection movement — no panic/wraparound on empty or
+/// single-item lists.
+fn move_selection(selected: &mut Option<usize>, len: usize, delta: i32) {
+    if len == 0 {
+        *selected = None;
+        return;
+    }
+    let current = selected.unwrap_or(0) as i32;
+    let next = (current + delta).clamp(0, len as i32 - 1);
+    *selected = Some(next as usize);
 }
 
 pub fn message_from_crossterm_event(event: crossterm::event::Event) -> Option<Message> {
